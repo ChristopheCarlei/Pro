@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Observatoire des projets étudiants</title>
+  <style>
+    :root {
+      --unige-teal: #004F4D;
+      --teal: #007370;
+      --light-teal: #E8F5F4;
+      --magenta: #CF0063;
+      --sand: #F7F4EE;
+      --ink: #1F2A44;
+      --muted: #667085;
+      --line: #E4E7EC;
+      --white: #FFFFFF;
+      --shadow: 0 14px 35px rgba(16, 24, 40, 0.08);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #FAFAFA;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand strong {
+      font-size: 16px;
+      color: var(--unige-teal);
+    }
+
+    .brand span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--muted);
+      align-items: center;
+    }
+
+    .navlinks a:hover {
+      color: var(--teal);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 11px 18px;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--unige-teal);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--teal);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--unige-teal);
+      border-color: var(--line);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--teal);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top left, rgba(0, 115, 112, 0.18), transparent 32%),
+        linear-gradient(135deg, #FFFFFF 0%, #F7F4EE 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 72px 24px 56px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      background: var(--light-teal);
+      color: var(--unige-teal);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      color: var(--unige-teal);
+      margin-bottom: 22px;
+    }
+
+    .lead {
+      font-size: 19px;
+      color: #344054;
+      max-width: 740px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 680px;
+    }
+
+    .stat {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 24px;
+      color: var(--magenta);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .process-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .process-item {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--light-teal);
+      color: var(--unige-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .process-item strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .process-item span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--unige-teal);
+    }
+
+    .section-head p {
+      max-width: 520px;
+      color: var(--muted);
+    }
+
+    .filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .filter {
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--muted);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .filter.active {
+      background: var(--unige-teal);
+      color: var(--white);
+      border-color: var(--unige-teal);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(16, 24, 40, 0.05);
+      transition: 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-visual {
+      height: 170px;
+      background:
+        linear-gradient(135deg, rgba(0, 79, 77, 0.86), rgba(207, 0, 99, 0.72)),
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.2) 0 2px, transparent 2px 12px);
+      display: flex;
+      align-items: end;
+      padding: 18px;
+      color: white;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .project-body {
+      padding: 20px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .tag {
+      background: var(--sand);
+      color: var(--teal);
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .project-body h3 {
+      font-size: 20px;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .project-body p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      color: #475467;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .project-detail {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .detail-header {
+      padding: 28px;
+      background: linear-gradient(135deg, var(--unige-teal), var(--teal));
+      color: white;
+    }
+
+    .detail-header h3 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .detail-block {
+      padding: 26px;
+      border-top: 1px solid var(--line);
+    }
+
+    .detail-block:nth-child(odd) {
+      border-right: 1px solid var(--line);
+    }
+
+    .detail-block h4 {
+      color: var(--magenta);
+      margin-bottom: 10px;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .detail-block p,
+    .detail-block li {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .detail-block ul {
+      padding-left: 18px;
+    }
+
+    .method {
+      background: var(--sand);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .step {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .step .num {
+      margin-bottom: 14px;
+    }
+
+    .step h3 {
+      color: var(--ink);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .commander {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .info-box {
+      background: var(--unige-teal);
+      color: white;
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-box h2 {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .info-box p {
+      color: rgba(255,255,255,0.86);
+      margin-bottom: 20px;
+    }
+
+    .criteria {
+      display: grid;
+      gap: 12px;
+    }
+
+    .criterion {
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 13px 14px;
+      border-radius: 14px;
+      font-size: 14px;
+    }
+
+    .form-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-card h3 {
+      font-size: 24px;
+      color: var(--unige-teal);
+      margin-bottom: 16px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #344054;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 13px;
+      font: inherit;
+      color: var(--ink);
+      background: #FCFCFD;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .notice {
+      margin-top: 16px;
+      background: var(--light-teal);
+      color: var(--unige-teal);
+      border-radius: 14px;
+      padding: 14px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    footer {
+      background: #101828;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 36px 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .footer-inner p {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+    }
+
+    @media (max-width: 940px) {
+      .hero-inner,
+      .commander,
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-grid,
+      .timeline {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .detail-block:nth-child(odd) {
+        border-right: none;
+      }
+
+      .navlinks {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-inner {
+        padding-top: 44px;
+      }
+
+      .stats,
+      .project-grid,
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head,
+      .footer-inner {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="#accueil">
+        <strong>Observatoire des projets étudiants</strong>
+        <span>Cours Professionnalisation · FPSE · Université de Genève</span>
+      </a>
+      <div class="navlinks">
+        <a href="#projets">Projets</a>
+        <a href="#methode">Méthode</a>
+        <a href="#commanditaires">Commanditaires</a>
+        <a class="btn btn-primary" href="#commanditaires">Proposer un projet</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">Pédagogie par projet · demandes réelles · livrables utiles</span>
+          <h1>Quand des demandes réelles deviennent des ressources pédagogiques</h1>
+          <p class="lead">
+            Chaque année, les étudiant-es du cours de Profesionnalisation de l'Université de Genève travaillent à partir de problématiques proposées par des commanditaires. Cet observatoire valorise leurs démarches, leurs productions et les compétences développées dans le cadre du cours.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projets">Découvrir les projets</a>
+            <a class="btn btn-secondary" href="#methode">Comprendre la démarche</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>13</strong><span>séances pour analyser, concevoir et présenter</span></div>
+            <div class="stat"><strong>3–5</strong><span>étudiant-es par groupe projet</span></div>
+            <div class="stat"><strong>1</strong><span>demande réelle transformée en livrable</span></div>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <span class="eyebrow">La trajectoire d’un projet</span>
+          <div class="process-list">
+            <div class="process-item"><div class="num">1</div><div><strong>Comprendre la demande</strong><span>Clarifier le contexte, les acteurs et le besoin de départ.</span></div></div>
+            <div class="process-item"><div class="num">2</div><div><strong>Analyser l’existant</strong><span>Identifier les ressources, contraintes et opportunités.</span></div></div>
+            <div class="process-item"><div class="num">3</div><div><strong>Concevoir une réponse</strong><span>Transformer le besoin en objectifs, scénario ou ressource.</span></div></div>
+            <div class="process-item"><div class="num">4</div><div><strong>Présenter et ajuster</strong><span>Défendre les choix, recevoir du feedback et finaliser.</span></div></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="projets">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Galerie</span>
+          <h2>Projets étudiants</h2>
+        </div>
+        <p>Une sélection de projets réalisés dans le cadre du cours. Les exemples ci-dessous sont des modèles à remplacer par les projets réels après validation des étudiant-es et commanditaires.</p>
+      </div>
+
+      <div class="filters" aria-label="Filtres de projets">
+        <button class="filter active">Tous</button>
+        <button class="filter">IA & formation</button>
+        <button class="filter">Vidéo</button>
+        <button class="filter">Ressource pédagogique</button>
+        <button class="filter">Professionnalisation</button>
+        <button class="filter">Orientation</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-visual">Guide d’usage de l’IA</div>
+          <div class="project-body">
+            <div class="tags"><span class="tag">2026</span><span class="tag">IA</span><span class="tag">Guide</span></div>
+            <h3>Bonnes pratiques de l’IA pour les étudiant-es</h3>
+            <p>Concevoir une ressource claire pour accompagner des usages responsables, utiles et explicites de l’IA générative dans les travaux académiques.</p>
+            <div class="meta-row"><span>Commanditaire institutionnel</span><span>Guide</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-visual">Pédagogie inversée</div>
+          <div class="project-body">
+            <div class="tags"><span class="tag">2026</span><span class="tag">Formation</span><span class="tag">Scénario</span></div>
+            <h3>Accompagner la mise en place d’une pédagogie inversée</h3>
+            <p>Formaliser un scénario d’accompagnement pour aider des enseignant-es à transformer une partie de leur enseignement.</p>
+            <div class="meta-row"><span>Équipe enseignante</span><span>Scénario</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-visual">Promotion de filière</div>
+          <div class="project-body">
+            <div class="tags"><span class="tag">2026</span><span class="tag">Orientation</span><span class="tag">Kit</span></div>
+            <h3>Faire découvrir une filière à des futur-es étudiant-es</h3>
+            <p>Créer un dispositif de présentation pour rendre une formation plus compréhensible, attractive et concrète pour un public cible.</p>
+            <div class="meta-row"><span>Partenaire externe</span><span>Kit</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-visual">Réalité professionnelle</div>
+          <div class="project-body">
+            <div class="tags"><span class="tag">2026</span><span class="tag">Professionnalisation</span><span class="tag">Vidéo</span></div>
+            <h3>Rendre visible la réalité du métier enseignant</h3>
+            <p>Imaginer une ressource permettant de mieux comprendre les situations professionnelles, les dilemmes et les apprentissages du terrain.</p>
+            <div class="meta-row"><span>Formation enseignante</span><span>Ressource</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-visual">Gamification</div>
+          <div class="project-body">
+            <div class="tags"><span class="tag">2026</span><span class="tag">Engagement</span><span class="tag">Prototype</span></div>
+            <h3>Concevoir une activité gamifiée pour apprendre autrement</h3>
+            <p>Transformer une situation d’apprentissage en expérience plus engageante, tout en conservant des objectifs pédagogiques explicites.</p>
+            <div class="meta-row"><span>Commanditaire externe</span><span>Prototype</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-visual">Ressources partagées</div>
+          <div class="project-body">
+            <div class="tags"><span class="tag">2026</span><span class="tag">Ressources</span><span class="tag">Cartographie</span></div>
+            <h3>Recenser et organiser des ressources utiles</h3>
+            <p>Structurer un ensemble de ressources existantes pour les rendre plus accessibles, lisibles et utilisables par un public professionnel.</p>
+            <div class="meta-row"><span>Institution</span><span>Cartographie</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="fiche-projet">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Modèle de fiche</span>
+          <h2>Exemple de page projet</h2>
+        </div>
+        <p>Chaque projet peut être présenté avec une structure stable, centrée sur la demande, la démarche, le livrable et les compétences développées.</p>
+      </div>
+
+      <article class="project-detail">
+        <div class="detail-header">
+          <h3>Bonnes pratiques de l’IA pour les étudiant-es</h3>
+          <p>Exemple éditorialisé de fiche projet — contenu à adapter à partir des productions réelles.</p>
+        </div>
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Le défi initial</h4>
+            <p>Comment aider les étudiant-es à utiliser l’IA générative de manière pertinente, responsable et transparente dans leurs apprentissages et travaux académiques ?</p>
+          </div>
+          <div class="detail-block">
+            <h4>La démarche</h4>
+            <p>Le groupe a clarifié les besoins, analysé les ressources existantes, identifié les risques d’usage et conçu une ressource orientée vers des pratiques concrètes.</p>
+          </div>
+          <div class="detail-block">
+            <h4>Le livrable final</h4>
+            <p>Un guide synthétique, accompagné d’exemples de situations, de conseils d’usage et de repères pour expliciter l’aide apportée par l’IA.</p>
+          </div>
+          <div class="detail-block">
+            <h4>Compétences développées</h4>
+            <ul>
+              <li>Analyser une demande réelle</li>
+              <li>Transformer un besoin en ressource pédagogique</li>
+              <li>Argumenter des choix de conception</li>
+              <li>Produire un livrable utile à un public cible</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="method">
+      <section id="methode">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Méthode pédagogique</span>
+            <h2>Une progression par étapes</h2>
+          </div>
+          <p>Le cours accompagne les étudiant-es dans une trajectoire de professionnalisation : passer d’une demande ouverte à une réponse pédagogique argumentée.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="step"><div class="num">1</div><h3>Entrer dans la demande</h3><p>Découvrir les projets, identifier les enjeux et former les groupes.</p></div>
+          <div class="step"><div class="num">2</div><h3>Analyser</h3><p>Comprendre le contexte, les publics, l’existant et les contraintes.</p></div>
+          <div class="step"><div class="num">3</div><h3>Concevoir</h3><p>Définir des objectifs, choisir un format et produire un prototype.</p></div>
+          <div class="step"><div class="num">4</div><h3>Présenter</h3><p>Défendre les choix, recevoir des retours et finaliser le livrable.</p></div>
+        </div>
+      </section>
+    </div>
+
+    <section id="commanditaires">
+      <div class="commander">
+        <div class="info-box">
+          <h2>Proposer un projet</h2>
+          <p>Vous avez une problématique de formation, d’accompagnement, de communication pédagogique ou de professionnalisation ? Vous pouvez proposer un projet aux étudiant-es du cours.</p>
+          <div class="criteria">
+            <div class="criterion">Une demande réelle, mais suffisamment ouverte</div>
+            <div class="criterion">Un public cible identifiable</div>
+            <div class="criterion">Un enjeu pédagogique ou formatif clair</div>
+            <div class="criterion">Un accès possible à des informations de contexte</div>
+            <div class="criterion">Une disponibilité minimale pour échanger avec le groupe</div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Formulaire de contact</h3>
+          <div class="form-grid">
+            <label>Nom / organisation
+              <input type="text" placeholder="Votre nom ou structure" />
+            </label>
+            <label>Adresse e-mail
+              <input type="email" placeholder="prenom.nom@exemple.ch" />
+            </label>
+            <label>Type de projet
+              <select>
+                <option>Ressource pédagogique</option>
+                <option>Scénario de formation</option>
+                <option>Analyse de besoins</option>
+                <option>Vidéo / dispositif média</option>
+                <option>Autre</option>
+              </select>
+            </label>
+            <label>Décrivez brièvement votre demande
+              <textarea placeholder="Quel est le contexte ? Quel problème souhaitez-vous travailler ? Quel public est concerné ?"></textarea>
+            </label>
+            <button class="btn btn-primary" type="button">Envoyer la proposition</button>
+          </div>
+          <div class="notice">Version maquette : le bouton n’envoie pas encore les données. À connecter ensuite à un formulaire institutionnel, Microsoft Forms ou Moodle.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>Observatoire des projets étudiants</strong>
+        <p>Cours 752501 · Professionnalisation & intervention · FPSE · Université de Genève</p>
+      </div>
+      <p>Mini-site vitrine — version de travail</p>
+    </div>
+  </footer>
+</body>
+</html>
