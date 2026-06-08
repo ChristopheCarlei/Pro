@@ -16,11 +16,13 @@
 <meta property="og:site_name" content="FPSE — Université de Genève" />
 <meta property="og:title" content="Observatoire des projets étudiants — FPSE, UNIGE" />
 <meta property="og:description" content="Quand les demandes du terrain deviennent des ressources pédagogiques : démarches, productions et compétences des étudiant·es du cours « Professionnalisation & intervention »." />
-<meta property="og:image" content="assets/og-cover.svg" />
+<!-- ⚠️ TODO : exporter assets/og-cover.svg en assets/og-cover.png (1200×630 px) et déposer à la racine -->
+<meta property="og:image" content="https://prointer.netlify.app/assets/og-cover.png" />
+<meta property="og:url" content="https://prointer.netlify.app/" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Observatoire des projets étudiants — FPSE, UNIGE" />
 <meta name="twitter:description" content="Quand les demandes du terrain deviennent des ressources pédagogiques." />
-<meta name="twitter:image" content="assets/og-cover.svg" />
+<meta name="twitter:image" content="https://prointer.netlify.app/assets/og-cover.png" />
 
 <style>
 /* ============================================================
@@ -142,7 +144,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.06;letter-spacing:-.02em;font-we
 
 /* ---- Filtres --------------------------------------------- */
 .filters{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin-bottom:28px}
-.filter-grid{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:16px}
+.filter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
 .filter label{display:block;font-size:12.5px;font-weight:800;letter-spacing:.04em;color:var(--teal-deep);margin-bottom:7px;text-transform:uppercase}
 .filter select,.filter input{width:100%;border:1.5px solid var(--line-strong);border-radius:var(--radius-sm);padding:11px 12px;font:inherit;font-size:15px;background:#fff;color:var(--ink)}
 .filter select:hover,.filter input:hover{border-color:var(--teal-deep)}
@@ -262,6 +264,41 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.06;letter-spacing:-.02em;font-we
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.card{transition:none}}
 
+/* ============================================================
+   Carte enseignant
+   ============================================================ */
+.instructor-card{display:flex;gap:clamp(20px,4vw,36px);align-items:flex-start;background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(24px,4vw,40px)}
+.instructor-avatar{width:96px;height:96px;border-radius:50%;overflow:hidden;flex:none;border:3px solid var(--line-strong);background:var(--bg-teal)}
+.instructor-avatar svg,.instructor-avatar img{width:100%;height:100%;display:block;object-fit:cover}
+.instructor-info{flex:1;min-width:0}
+.instructor-info h3{font-size:clamp(20px,2.5vw,26px);font-weight:800;letter-spacing:-.01em;margin-bottom:4px}
+.instructor-info .role{display:block;color:var(--teal-deep);font-size:14.5px;font-weight:700;margin-bottom:14px}
+.instructor-info p{color:var(--muted);font-size:16px;line-height:1.65;margin:0 0 10px}
+.instructor-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+@media(max-width:600px){.instructor-card{flex-direction:column}.instructor-avatar{width:72px;height:72px}}
+
+/* ============================================================
+   Témoignage commanditaire
+   ============================================================ */
+.testimonial-section{padding:clamp(20px,3vw,28px);border-top:1px solid var(--line)}
+.testimonial-section h4{margin:0 0 14px;color:var(--rose);font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.detail-head.magenta~.testimonial-section h4{color:var(--teal-deep)}
+.quote-card{background:var(--bg-teal);border-radius:var(--radius-sm);padding:clamp(16px,3vw,22px);border-left:4px solid var(--teal-deep)}
+.detail-head.magenta~.testimonial-section .quote-card{background:var(--bg-rose);border-left-color:var(--rose)}
+.quote-card blockquote{margin:0 0 10px;font-size:16px;line-height:1.65;color:var(--ink);font-style:italic}
+.quote-card cite{display:block;font-size:13.5px;font-weight:700;color:var(--teal-deep);font-style:normal}
+.detail-head.magenta~.testimonial-section .quote-card cite{color:var(--rose-deep)}
+.placeholder-inline{color:var(--muted);font-style:normal;opacity:.75}
+
+/* ============================================================
+   Retombées
+   ============================================================ */
+.retombees{padding:clamp(20px,3vw,28px);border-top:1px solid var(--line);background:var(--bg-soft)}
+.retombees h4{margin:0 0 10px;color:var(--rose);font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.detail-head.magenta~.retombees h4{color:var(--teal-deep)}
+.retombees p{color:var(--muted);font-size:15.5px;line-height:1.6;margin:0}
+.todo-badge{display:inline-flex;align-items:center;gap:5px;background:#FFF3CD;color:#7B5A00;border:1px dashed #E0A800;border-radius:6px;padding:3px 10px;font-size:12.5px;font-weight:700;font-style:normal;vertical-align:middle;margin-left:4px}
+
 /* ---- Accessibilité : liens ouvrant dans un nouvel onglet ---- */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 a[target="_blank"].btn::after{
@@ -269,9 +306,69 @@ a[target="_blank"].btn::after{
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E") no-repeat center/contain;
   opacity:.75;vertical-align:middle;
 }
+
+/* ============================================================
+   Bouton retour en haut
+   ============================================================ */
+#back-top{position:fixed;bottom:28px;right:28px;z-index:100;width:48px;height:48px;border-radius:50%;background:var(--teal-deep);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;box-shadow:0 2px 14px rgba(0,133,127,.4);font-family:var(--font)}
+#back-top.visible{opacity:1;pointer-events:auto}
+#back-top:hover{background:var(--teal-ink);transform:translateY(-3px)}
+#back-top svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:760px){#back-top{bottom:16px;right:14px;width:42px;height:42px}}
+
+/* ============================================================
+   Mobile PDF — masquer l'iframe, afficher un bouton proéminent
+   ============================================================ */
+@media(max-width:760px){
+  .embed-section.has-pdf iframe.embed-frame{display:none}
+  .embed-section.has-pdf .embed-note{display:flex !important;flex-direction:column;align-items:flex-start;gap:10px;margin-top:0}
+  .embed-section.has-pdf .embed-note .btn.secondary{font-size:16px;padding:14px 22px;border-color:var(--teal-deep);color:var(--teal-deep);font-weight:800}
+}
+
+/* ============================================================
+   En-tête impression (masqué à l'écran)
+   ============================================================ */
+#print-header{display:none}
+
+/* ============================================================
+   Mode impression
+   ============================================================ */
+@media print{
+  #print-header{display:block !important;padding-bottom:16pt;border-bottom:3pt solid #CF0063;margin-bottom:24pt}
+  #print-header img{height:36pt;width:auto;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  #print-header p{font-size:10pt;color:#5A6477;margin:6pt 0 0}
+  .topstrip,.topbar,.method,.filters,.filter-meta,
+  iframe,.embed-video,.embed-note,
+  .instructor-actions,.hero .actions,
+  .proposal .btn,#back-top,.burger{display:none !important}
+  *{box-shadow:none !important;transition:none !important;animation:none !important}
+  body{font-size:11pt;color:#000;background:#fff}
+  section{width:100% !important;padding:16pt 0 !important}
+  h2{page-break-after:avoid}
+  .hero{background:#00857F !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:24pt !important;width:100% !important}
+  .hero h1{font-size:26pt;max-width:none}
+  .hero .lead{font-size:13pt}
+  .stats{display:flex;gap:12pt;flex-wrap:wrap}
+  .stat{border:1pt solid rgba(255,255,255,.4) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .grid{grid-template-columns:repeat(3,1fr) !important;gap:12pt}
+  .card{page-break-inside:avoid;transform:none !important;display:flex !important}
+  .detail{page-break-inside:avoid;margin-bottom:18pt;border:1pt solid #ddd !important}
+  .detail-head{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .detail-grid{grid-template-columns:repeat(2,1fr) !important}
+  .block:nth-child(odd){border-right:1pt solid #ddd}
+  .embed-section::after{content:"Livrable disponible en ligne.";display:block;font-size:10pt;color:#5A6477;margin-top:8pt;font-style:italic}
+  .footer{border-top:1pt solid #ddd}
+  .empty{display:none !important}
+}
 </style>
 </head>
 <body>
+<!-- En-tête visible uniquement à l'impression -->
+<div id="print-header">
+  <img src="assets/logos/logoFPSE.png" alt="FPSE — Université de Genève" />
+  <p>Observatoire des projets étudiants · Cours « Professionnalisation &amp; intervention » · FPSE, Université de Genève · <em>prointer.netlify.app</em></p>
+</div>
+
 <div class="topstrip"></div>
 <header class="topbar">
   <nav class="nav">
@@ -289,6 +386,7 @@ a[target="_blank"].btn::after{
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <div class="navlinks" id="navlinks">
+      <a href="#ce-cours">Le cours</a>
       <a href="#methode">Méthode</a>
       <a href="#projets">Projets</a>
       <a href="#fiches">Fiches projets</a>
@@ -313,6 +411,34 @@ a[target="_blank"].btn::after{
       <div class="stat"><strong>8</strong><span>projets recensés</span></div>
       <div class="stat"><strong>7</strong><span>commanditaires</span></div>
       <div class="stat"><strong>35</strong><span>étudiant·es impliqué·es</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CE COURS ====================== -->
+<section id="ce-cours">
+  <div class="head">
+    <span class="eyebrow">À propos du cours</span>
+    <h2>Le cours « Professionnalisation &amp; intervention »</h2>
+    <p>Un dispositif pédagogique par projet ancré dans des demandes réelles, au service des futurs praticien·nes de l'éducation et de la formation.</p>
+  </div>
+  <div class="instructor-card">
+    <div class="instructor-avatar" aria-hidden="true">
+      <!-- ⚠️ TODO : remplacer ce SVG par une vraie photo (assets/photos/christophe-carlei.png) -->
+      <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <rect width="96" height="96" fill="#EAF6F5"/>
+        <text x="48" y="62" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="34" fill="#00857F">CC</text>
+      </svg>
+    </div>
+    <div class="instructor-info">
+      <h3>Christophe Carlei</h3>
+      <span class="role">Chargé d'enseignement · FPSE, Pôle SEA · Université de Genève</span>
+      <p>Le cours 752501 place les étudiant·es au cœur de problématiques réelles formulées par des commanditaires externes — institutions, associations, services de formation. Chaque groupe analyse un besoin authentique, conçoit un livrable adapté et le défend devant son commanditaire.</p>
+      <p>Cette pédagogie par projet développe des compétences d'analyse, de conception pédagogique et de communication professionnelle directement transférables aux métiers de l'éducation et de la formation. L'Observatoire valorise ces productions au-delà du semestre.</p>
+      <div class="instructor-actions">
+        <a class="btn primary" href="https://view.genially.com/6826f75ed204f7cce7ba42ea" target="_blank" rel="noopener">Syllabus du cours<span class="sr-only"> (nouvel onglet)</span></a>
+        <a class="btn secondary" href="https://pgc.unige.ch/main/teachings/details/2026-752501?year=2025&amp;fac=default-value" target="_blank" rel="noopener">Programme officiel UNIGE<span class="sr-only"> (nouvel onglet)</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -343,6 +469,7 @@ a[target="_blank"].btn::after{
     <div class="filter-grid">
       <div class="filter"><label for="fy">Année</label><select id="fy"><option value="all">Toutes</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option></select></div>
       <div class="filter"><label for="ft">Thème</label><select id="ft"><option value="all">Tous</option><option value="competences">Compétences transversales</option><option value="evaluation">Évaluation de formation</option><option value="pedagogie-active">Pédagogie active</option><option value="mediation">Médiation scientifique</option><option value="accueil">Accueil / intégration</option><option value="pedagogie-univ">Pédagogie universitaire</option></select></div>
+      <div class="filter"><label for="fl">Livrable</label><select id="fl"><option value="all">Tous</option><option value="rapport">Rapport</option><option value="video">Vidéo</option><option value="questionnaire">Questionnaire</option><option value="jeu">Jeu sérieux</option><option value="maquette">Maquette web</option><option value="dispositif">Dispositif</option><option value="podcast">Podcast</option></select></div>
       <div class="filter"><label for="fs">Commanditaire</label><select id="fs"><option value="all">Tous</option><option value="unige">UNIGE</option><option value="uclouvain">UCLouvain</option><option value="cmq">CMQ</option><option value="iufrs">IUFRS / Lausanne</option><option value="fribourg">État de Fribourg</option></select></div>
       <div class="filter"><label for="fq">Recherche</label><input id="fq" type="search" placeholder="Titre, public, mot-clé…" /></div>
     </div>
@@ -350,7 +477,7 @@ a[target="_blank"].btn::after{
   </div>
 
   <div class="grid" id="grid">
-    <article class="card" data-year="2026" data-type="competences" data-sponsor="unige" data-search="parcours competences enquête quantitative rapport unige dife centre carrière">
+    <article class="card" data-year="2026" data-type="competences" data-livrable="rapport" data-sponsor="unige" data-search="parcours competences enquête quantitative rapport unige dife centre carrière">
       <div class="cover">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="11" width="3.4" height="7"/><rect x="10.3" y="7" width="3.4" height="11"/><rect x="15.6" y="13" width="3.4" height="5"/></svg></span>
         <span class="year">2026 · Rapport</span>
@@ -364,7 +491,7 @@ a[target="_blank"].btn::after{
       </div>
     </article>
 
-    <article class="card" data-year="2026" data-type="competences" data-sponsor="unige" data-search="parcours competences micro trottoir video témoignages unige dife">
+    <article class="card" data-year="2026" data-type="competences" data-livrable="video" data-sponsor="unige" data-search="parcours competences micro trottoir video témoignages unige dife">
       <div class="cover rose">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"/></svg></span>
         <span class="year">2026 · Vidéo</span>
@@ -378,7 +505,7 @@ a[target="_blank"].btn::after{
       </div>
     </article>
 
-    <article class="card" data-year="2026" data-type="evaluation" data-sponsor="uclouvain" data-search="communication non verbale uclouvain questionnaire alumni enseignement">
+    <article class="card" data-year="2026" data-type="evaluation" data-livrable="questionnaire" data-sponsor="uclouvain" data-search="communication non verbale uclouvain questionnaire alumni enseignement">
       <div class="cover">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3.2"/><path d="M5.5 21c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/></svg></span>
         <span class="year">2026 · Questionnaire</span>
@@ -392,7 +519,7 @@ a[target="_blank"].btn::after{
       </div>
     </article>
 
-    <article class="card" data-year="2026" data-type="pedagogie-active" data-sponsor="cmq" data-search="médicament jeu sérieux plateau pédagogique hybride cmq lyon">
+    <article class="card" data-year="2026" data-type="pedagogie-active" data-livrable="jeu" data-sponsor="cmq" data-search="médicament jeu sérieux plateau pédagogique hybride cmq lyon">
       <div class="cover rose">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.1" fill="currentColor"/><circle cx="15" cy="9" r="1.1" fill="currentColor"/><circle cx="9" cy="15" r="1.1" fill="currentColor"/><circle cx="15" cy="15" r="1.1" fill="currentColor"/></svg></span>
         <span class="year">2026 · Jeu sérieux</span>
@@ -406,7 +533,7 @@ a[target="_blank"].btn::after{
       </div>
     </article>
 
-    <article class="card" data-year="2025" data-type="mediation" data-sponsor="unige" data-search="emotion education émotions site web unige fpse idea mediation scientifique">
+    <article class="card" data-year="2025" data-type="mediation" data-livrable="maquette" data-sponsor="unige" data-search="emotion education émotions site web unige fpse idea mediation scientifique">
       <div class="cover">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg></span>
         <span class="year">2025 · Maquette web</span>
@@ -420,7 +547,7 @@ a[target="_blank"].btn::after{
       </div>
     </article>
 
-    <article class="card" data-year="2025" data-type="accueil" data-sponsor="iufrs" data-search="communauté apprentissage journée accueil iufrs lausanne unil chuv">
+    <article class="card" data-year="2025" data-type="accueil" data-livrable="dispositif" data-sponsor="iufrs" data-search="communauté apprentissage journée accueil iufrs lausanne unil chuv">
       <div class="cover rose">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="2.4"/><circle cx="16" cy="9" r="2.4"/><path d="M3.5 19c0-2.5 2-4.3 4.5-4.3s4.5 1.8 4.5 4.3M12.5 18.6c.4-2 2.1-3.4 4.2-3.4 2.3 0 4.2 1.8 4.2 4.3"/></svg></span>
         <span class="year">2025 · Journée d'accueil</span>
@@ -434,7 +561,7 @@ a[target="_blank"].btn::after{
       </div>
     </article>
 
-    <article class="card" data-year="2024" data-type="pedagogie-univ" data-sponsor="unige" data-search="alignement pédagogique unige pole sea objectifs activités evaluation podcast">
+    <article class="card" data-year="2024" data-type="pedagogie-univ" data-livrable="podcast" data-sponsor="unige" data-search="alignement pédagogique unige pole sea objectifs activités evaluation podcast">
       <div class="cover">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span>
         <span class="year">2024 · Podcast</span>
@@ -448,7 +575,7 @@ a[target="_blank"].btn::after{
       </div>
     </article>
 
-    <article class="card" data-year="2024" data-type="evaluation" data-sponsor="fribourg" data-search="evaluation formation état fribourg questionnaire formation continue kirkpatrick guskey">
+    <article class="card" data-year="2024" data-type="evaluation" data-livrable="questionnaire" data-sponsor="fribourg" data-search="evaluation formation état fribourg questionnaire formation continue kirkpatrick guskey">
       <div class="cover rose">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4.5h6V7H9zM8.5 12l2 2 3.5-3.8"/></svg></span>
         <span class="year">2024 · Questionnaire</span>
@@ -485,6 +612,17 @@ a[target="_blank"].btn::after{
     </div>
     <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Léa Boesch</span><span>Fiorella Guida Mühlig</span><span>Kidus Mengistu</span><span>Gent Sahiti</span><span>Inès-Joyce Yankov</span></div></div>
     <div class="embed-section"><h4>Livrable intégré</h4><iframe class="embed-frame" src="Livrables/Parcours%20comp%C3%A9tences%20-%20Enqu%C3%AAte%20quantitative.pdf#view=FitH" title="Parcours compétences — Enquête quantitative" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="Livrables/Parcours%20comp%C3%A9tences%20-%20Enqu%C3%AAte%20quantitative.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p></div>
+    <div class="testimonial-section">
+      <h4>Ce qu'en dit la commanditaire</h4>
+      <div class="quote-card">
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Marine Guigon, DIFE, Centre de carrière, UNIGE]</span></blockquote>
+        <cite>Marine Guigon · Chargée de mission « Parcours compétences » · UNIGE — DIFE</cite>
+      </div>
+    </div>
+    <div class="retombees">
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> Le rapport a-t-il été transmis à la direction du DIFE ? A-t-il alimenté une décision institutionnelle concernant le dispositif « Parcours compétences » ?</p>
+    </div>
   </article>
 
   <article class="detail" id="parcours-competences-micro-trottoir">
@@ -500,6 +638,17 @@ a[target="_blank"].btn::after{
     </div>
     <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Cécile Bertschmann</span><span>Amèle Adda</span><span>Léo Bonnal</span><span>Soukaïna Ajouaou</span><span>Joman Atwan</span></div></div>
     <div class="embed-section"><h4>Livrable intégré</h4><div class="embed-video"><iframe src="https://player.vod2.infomaniak.com/embed/1jijk03uk2q73" allowfullscreen crossorigin="anonymous" allow="autoplay; fullscreen; picture-in-picture" title="Parcours compétences — Micro-trottoir vidéo" loading="lazy"></iframe></div></div>
+    <div class="testimonial-section">
+      <h4>Ce qu'en dit la commanditaire</h4>
+      <div class="quote-card">
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Marine Guigon, DIFE, Centre de carrière, UNIGE]</span></blockquote>
+        <cite>Marine Guigon · Chargée de mission « Parcours compétences » · UNIGE — DIFE</cite>
+      </div>
+    </div>
+    <div class="retombees">
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> La vidéo a-t-elle été diffusée ? Sur quel canal (site UNIGE, réseaux sociaux, événements) ? A-t-elle servi de support de communication pour le dispositif ?</p>
+    </div>
   </article>
 
   <article class="detail" id="communication-non-verbale">
@@ -515,6 +664,17 @@ a[target="_blank"].btn::after{
     </div>
     <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Alejandra Guidi</span><span>Kalliopi Michopoulou</span><span>Marianne Paredes Gonzalez</span><span>Wiam Tajeddine</span><span>Mohamed Naggay</span></div></div>
     <div class="embed-section"><h4>Livrable intégré</h4><iframe class="embed-frame" src="Livrables/Communication%20non%20verbale.html" title="Communication non verbale" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="Livrables/Communication%20non%20verbale.html" target="_blank" rel="noopener">Ouvrir le livrable dans un nouvel onglet</a></p><h4 style="margin-top:28px">Questionnaire en ligne</h4><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9ewPNtsh5sLJ5ilXiDrTHiejW3xRfMJVomNrELf8U2TcI4Q/viewform?embedded=true" class="embed-frame" title="Questionnaire — Communication non verbale" loading="lazy">Chargement…</iframe><p class="embed-note"><a class="btn secondary" href="https://forms.gle/sCZ6Xyiq1LCZzkJv8" target="_blank" rel="noopener">Ouvrir le questionnaire dans un nouvel onglet</a></p></div>
+    <div class="testimonial-section">
+      <h4>Ce qu'en dit le commanditaire</h4>
+      <div class="quote-card">
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Mathieu Couplet, UCLouvain]</span></blockquote>
+        <cite>Mathieu Couplet · Enseignant en communication non-verbale · UCLouvain</cite>
+      </div>
+    </div>
+    <div class="retombees">
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> Le questionnaire a-t-il été envoyé aux alumni ? Combien de réponses ont été recueillies ? Les résultats ont-ils modifié le contenu ou le format de l'atelier ?</p>
+    </div>
   </article>
 
   <article class="detail" id="medicament-en-jeu">
@@ -530,6 +690,17 @@ a[target="_blank"].btn::after{
     </div>
     <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Ludovic Pasquier</span><span>Celestin Tanari</span><span>Christian Sorgho</span><span>Marco Andréa Scorti</span><span>Frédéric Auderset</span></div></div>
     <div class="embed-section"><h4>Livrable intégré</h4><div id="medicament-carousel" class="carousel"></div></div>
+    <div class="testimonial-section">
+      <h4>Ce qu'en dit la commanditaire</h4>
+      <div class="quote-card">
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Maud Bernies, CMQ Lyon]</span></blockquote>
+        <cite>Maud Bernies · Directrice CMQe « Biotech Santé » · CMQ Lyon</cite>
+      </div>
+    </div>
+    <div class="retombees">
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> Le jeu sérieux a-t-il été testé en séance réelle avec des apprenants BTS ? Le CMQ prévoit-il de l'intégrer à son programme de formation ?</p>
+    </div>
   </article>
 
   <article class="detail" id="emotion-education">
@@ -545,6 +716,17 @@ a[target="_blank"].btn::after{
     </div>
     <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Anaëlle Roduit</span><span>Théo Keel</span></div></div>
     <div class="embed-section"><h4>Livrable intégré</h4><iframe class="embed-frame" src="https://view.genially.com/681a3fa50c54fc73aa5ba3b0" title="Maquette Genially — Émotion et Éducation" allowfullscreen loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="https://view.genially.com/681a3fa50c54fc73aa5ba3b0" target="_blank" rel="noopener">Ouvrir le Genially dans un nouvel onglet</a></p></div>
+    <div class="testimonial-section">
+      <h4>Ce qu'en dit la commanditaire</h4>
+      <div class="quote-card">
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Nathalie Mella, UNIGE — FPSE]</span></blockquote>
+        <cite>Nathalie Mella · Chargée de cours · UNIGE — FPSE</cite>
+      </div>
+    </div>
+    <div class="retombees">
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> La maquette a-t-elle servi de base pour le développement d'un vrai site ? Le projet de médiation scientifique a-t-il été soumis à financement ?</p>
+    </div>
   </article>
 
   <article class="detail" id="communaute-apprentissage">
@@ -560,6 +742,17 @@ a[target="_blank"].btn::after{
     </div>
     <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Angela Diaz</span><span>Kasia Dobrzynska</span><span>Isabel Guillinta</span></div></div>
     <div class="embed-section"><h4>Livrable intégré</h4><iframe class="embed-frame" src="Livrables/Communaute.pdf" title="Communauté d'apprentissage" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="Livrables/Communaute.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p></div>
+    <div class="testimonial-section">
+      <h4>Ce qu'en dit le commanditaire</h4>
+      <div class="quote-card">
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Gaëtan Moerman, IUFRS / Lausanne]</span></blockquote>
+        <cite>Gaëtan Moerman · Conseiller pédagogique · IUFRS — Université de Lausanne</cite>
+      </div>
+    </div>
+    <div class="retombees">
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> Le dispositif a-t-il été mis en œuvre lors d'une journée d'accueil à l'IUFRS ? Quels retours les participant·es ont-ils exprimés ?</p>
+    </div>
   </article>
 
   <article class="detail" id="alignement-pedagogique">
@@ -575,6 +768,17 @@ a[target="_blank"].btn::after{
     </div>
     <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Léa Itié</span><span>Aylin Cretegny</span><span>Maya Chacon Moran</span><span>Elena Diz</span><span>Ima Jimenez</span><span>Inès Derouiche</span></div></div>
     <div class="embed-section"><h4>Livrable intégré</h4><div class="embed-video"><iframe src="https://player.vod2.infomaniak.com/embed/1jijk03uk2q6t" allowfullscreen crossorigin="anonymous" allow="autoplay; fullscreen; picture-in-picture" title="Alignement pédagogique" loading="lazy"></iframe></div></div>
+    <div class="testimonial-section">
+      <h4>Ce qu'en dit la commanditaire</h4>
+      <div class="quote-card">
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Catherine Huneault, Pôle SEA, UNIGE]</span></blockquote>
+        <cite>Catherine Huneault · Responsable développement et qualité des cursus · UNIGE — Pôle SEA</cite>
+      </div>
+    </div>
+    <div class="retombees">
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> Le podcast a-t-il été intégré aux ressources du Pôle SEA ? A-t-il été diffusé dans les formations pour enseignant·es universitaires ?</p>
+    </div>
   </article>
 
   <article class="detail" id="evaluation-formation">
@@ -590,6 +794,17 @@ a[target="_blank"].btn::after{
     </div>
     <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Brendiana Misini</span><span>Catherine de Vos</span><span>Florence Bremnes Mayenson</span><span>Lazarine Raissa Nombré</span></div></div>
     <div class="embed-section"><h4>Livrable intégré</h4><iframe class="embed-frame" src="https://forms.office.com/e/0yrGm07VYH" title="Questionnaire Forms — Évaluation formation" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="https://forms.office.com/e/0yrGm07VYH" target="_blank" rel="noopener">Ouvrir le questionnaire dans un nouvel onglet</a></p></div>
+    <div class="testimonial-section">
+      <h4>Ce qu'en dit la commanditaire</h4>
+      <div class="quote-card">
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Sophie Margaronis, État de Fribourg]</span></blockquote>
+        <cite>Sophie Margaronis · Responsable du programme de formation continue · État de Fribourg</cite>
+      </div>
+    </div>
+    <div class="retombees">
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> Le questionnaire a-t-il été déployé auprès du personnel de l'État de Fribourg ? A-t-il remplacé ou complété les outils d'évaluation existants ?</p>
+    </div>
   </article>
 </section>
 
@@ -606,6 +821,10 @@ a[target="_blank"].btn::after{
   </div>
 </section>
 </main>
+
+<button id="back-top" type="button" aria-label="Retour en haut de page">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
 
 <footer class="footer">
   <div class="footer-inner">
@@ -635,7 +854,7 @@ a[target="_blank"].btn::after{
 /* ---- Filtres galerie ---- */
 (function(){
   var cards=[].slice.call(document.querySelectorAll('.card'));
-  var y=document.getElementById('fy'),t=document.getElementById('ft'),s=document.getElementById('fs'),q=document.getElementById('fq'),
+  var y=document.getElementById('fy'),t=document.getElementById('ft'),l=document.getElementById('fl'),s=document.getElementById('fs'),q=document.getElementById('fq'),
       c=document.getElementById('count'),e=document.getElementById('empty'),r=document.getElementById('reset');
   function n(x){return (x||'').toLowerCase();}
   function f(){
@@ -643,6 +862,7 @@ a[target="_blank"].btn::after{
     cards.forEach(function(card){
       var ok=(y.value==='all'||card.dataset.year===y.value)
         &&(t.value==='all'||n(card.dataset.type).indexOf(t.value)>-1)
+        &&(l.value==='all'||n(card.dataset.livrable)===l.value)
         &&(s.value==='all'||n(card.dataset.sponsor).indexOf(s.value)>-1)
         &&(!q.value||n(card.dataset.search+' '+card.innerText).indexOf(n(q.value))>-1);
       card.style.display=ok?'flex':'none';if(ok)shown++;
@@ -650,9 +870,56 @@ a[target="_blank"].btn::after{
     c.textContent=shown+' projet'+(shown>1?'s':'')+' affiché'+(shown>1?'s':'');
     e.style.display=shown?'none':'block';
   }
-  [y,t,s,q].forEach(function(x){x.addEventListener('input',f);});
-  r.addEventListener('click',function(){y.value=t.value=s.value='all';q.value='';f();});
+  [y,t,l,s,q].forEach(function(x){x.addEventListener('input',f);});
+  r.addEventListener('click',function(){y.value=t.value=l.value=s.value='all';q.value='';f();});
   f();
+})();
+
+/* ---- Bouton retour en haut ---- */
+(function(){
+  var btn=document.getElementById('back-top');
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('visible',window.scrollY>500);
+  },{passive:true});
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+})();
+
+/* ---- Ancres URL partageables via pushState ---- */
+(function(){
+  // Au chargement : si l'URL contient un ancre correspondant à une fiche, scroll smooth
+  var hash=location.hash;
+  if(hash){
+    var target=document.querySelector('.detail'+hash);
+    if(target){
+      setTimeout(function(){
+        target.scrollIntoView({behavior:'smooth',block:'start'});
+      },120);
+    }
+  }
+  // Au clic sur une carte : pushState + scroll smooth au lieu de saut natif
+  document.querySelectorAll('.card h3 a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href');
+      var el=document.querySelector('.detail'+id);
+      if(el){
+        e.preventDefault();
+        history.pushState(null,'',id);
+        el.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    });
+  });
+})();
+
+/* ---- Mobile PDF : détecter les iframes PDF et marquer la section ---- */
+(function(){
+  document.querySelectorAll('iframe.embed-frame').forEach(function(iframe){
+    if(iframe.getAttribute('src')&&iframe.getAttribute('src').indexOf('.pdf')>-1){
+      var section=iframe.closest('.embed-section');
+      if(section)section.classList.add('has-pdf');
+    }
+  });
 })();
 
 /* ---- Carrousel « Médicament » (liste statique, sans dépendance réseau) ---- */
@@ -689,4 +956,139 @@ a[target="_blank"].btn::after{
 })();
 </script>
 </body>
+</html>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <strong>Observatoire des projets étudiants</strong>
+      <p>Cours « Professionnalisation &amp; intervention » · FPSE · Université de Genève</p>
+    </div>
+    <div class="footer-logo" style="display:flex;gap:24px;align-items:center">
+      <img src="assets/logos/logoFPSE.png" alt="FPSE — Université de Genève" />
+      <img src="assets/logos/AFFORDENS_TR.png" alt="AFORDENS — Laboratoire" style="max-width:160px;max-height:54px;object-fit:contain" />
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---- Menu mobile ---- */
+(function(){
+  var b=document.getElementById('burger'),n=document.getElementById('navlinks');
+  b.addEventListener('click',function(){
+    var open=n.classList.toggle('open');
+    b.setAttribute('aria-expanded',open?'true':'false');
+    b.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
+  });
+  n.addEventListener('click',function(e){if(e.target.closest('a'))n.classList.remove('open');});
+})();
+
+/* ---- Filtres galerie ---- */
+(function(){
+  var cards=[].slice.call(document.querySelectorAll('.card'));
+  var y=document.getElementById('fy'),t=document.getElementById('ft'),l=document.getElementById('fl'),s=document.getElementById('fs'),q=document.getElementById('fq'),
+      c=document.getElementById('count'),e=document.getElementById('empty'),r=document.getElementById('reset');
+  function n(x){return (x||'').toLowerCase();}
+  function f(){
+    var shown=0;
+    cards.forEach(function(card){
+      var ok=(y.value==='all'||card.dataset.year===y.value)
+        &&(t.value==='all'||n(card.dataset.type).indexOf(t.value)>-1)
+        &&(l.value==='all'||n(card.dataset.livrable)===l.value)
+        &&(s.value==='all'||n(card.dataset.sponsor).indexOf(s.value)>-1)
+        &&(!q.value||n(card.dataset.search+' '+card.innerText).indexOf(n(q.value))>-1);
+      card.style.display=ok?'flex':'none';if(ok)shown++;
+    });
+    c.textContent=shown+' projet'+(shown>1?'s':'')+' affiché'+(shown>1?'s':'');
+    e.style.display=shown?'none':'block';
+  }
+  [y,t,l,s,q].forEach(function(x){x.addEventListener('input',f);});
+  r.addEventListener('click',function(){y.value=t.value=l.value=s.value='all';q.value='';f();});
+  f();
+})();
+
+/* ---- Bouton retour en haut ---- */
+(function(){
+  var btn=document.getElementById('back-top');
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('visible',window.scrollY>500);
+  },{passive:true});
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+})();
+
+/* ---- Ancres URL partageables via pushState ---- */
+(function(){
+  var hash=location.hash;
+  if(hash){
+    var target=document.querySelector('.detail'+hash);
+    if(target){setTimeout(function(){target.scrollIntoView({behavior:'smooth',block:'start'});},120);}
+  }
+  document.querySelectorAll('.card h3 a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href');
+      var el=document.querySelector('.detail'+id);
+      if(el){
+        e.preventDefault();
+        history.pushState(null,'',id);
+        el.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    });
+  });
+})();
+
+/* ---- Mobile PDF : detecter les iframes PDF et marquer la section ---- */
+(function(){
+  document.querySelectorAll('iframe.embed-frame').forEach(function(iframe){
+    if(iframe.getAttribute('src')&&iframe.getAttribute('src').indexOf('.pdf')>-1){
+      var section=iframe.closest('.embed-section');
+      if(section)section.classList.add('has-pdf');
+    }
+  });
+})();
+
+/* ---- Carrousel Medicament (liste statique, sans dependance reseau) ---- */
+(function(){
+  var root=document.getElementById('medicament-carousel');
+  if(!root)return;
+  var base='Livrables/Medicament/';
+  var images=[
+    {file:'Materiel du jeu.jpg',label:'Materiel du jeu'},
+    {file:'Demo jeu en seance.jpg',label:'Demo du jeu en seance'},
+    {file:'Interface jeu 2.png',label:'Interface projetee'},
+    {file:'Plateau de jeu.jpg',label:'Plateau de jeu'},
+    {file:'Regles.jpg',label:'Regles du jeu'}
+  ];
+  var index=0;
+  function url(f){return base+encodeURIComponent(f);}
+  function render(){
+    var img=images[index];
+    root.innerHTML=
+      '<div class="carousel-main">'+
+        '<button class="carousel-btn" type="button" id="prev-med" aria-label="Image precedente">‹</button>'+
+        '<div><div class="carousel-image-wrap"><a href="'+url(img.file)+'" target="_blank" rel="noopener"><img src="'+url(img.file)+'" alt="'+img.label+'" loading="lazy"></a></div>'+
+        '<div class="carousel-caption">'+img.label+'</div></div>'+
+        '<button class="carousel-btn" type="button" id="next-med" aria-label="Image suivante">›</button>'+
+      '</div>'+
+      '<div class="thumbs">'+images.map(function(im,i){
+        return '<button type="button" class="'+(i===index?'active':'')+'" data-index="'+i+'" aria-label="Voir '+im.label+'"><img src="'+url(im.file)+'" alt="'+im.label+'" loading="lazy"></button>';
+      }).join('')+'</div>';
+    document.getElementById('prev-med').onclick=function(){index=(index-1+images.length)%images.length;render();};
+    document.getElementById('next-med').onclick=function(){index=(index+1)%images.length;render();};
+    root.querySelectorAll('.thumbs button').forEach(function(btn){btn.onclick=function(){index=Number(btn.dataset.index);render();};});
+  }
+  render();
+})();
+</script>
+</body>
+</html>
+
+    root.querySelectorAll(".thumbs button").forEach(function(btn){btn.onclick=function(){index=Number(btn.dataset.index);render();};});
+  }
+  render();
+})();
+</script>
+</body>
+</html>
+ody>
 </html>
