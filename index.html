@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
@@ -6,27 +6,27 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<title>Observatoire des projets Ã©tudiants â€” FPSE, UniversitÃ© de GenÃ¨ve</title>
-<meta name="description" content="L'Observatoire des projets Ã©tudiants valorise les dÃ©marches et livrables rÃ©alisÃ©s par les Ã©tudiantÂ·es du cours Â« Professionnalisation & intervention Â» de la FPSE (UniversitÃ© de GenÃ¨ve) Ã  partir de demandes rÃ©elles de commanditaires." />
+<title>Observatoire des projets étudiants — FPSE, Université de Genève</title>
+<meta name="description" content="L'Observatoire des projets étudiants valorise les démarches et livrables réalisés par les étudiant·es du cours « Professionnalisation & intervention » de la FPSE (Université de Genève) à partir de demandes réelles de commanditaires." />
 <meta name="theme-color" content="#00857F" />
 
 <!-- Open Graph / partage -->
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="fr_CH" />
-<meta property="og:site_name" content="FPSE â€” UniversitÃ© de GenÃ¨ve" />
-<meta property="og:title" content="Observatoire des projets Ã©tudiants â€” FPSE, UNIGE" />
-<meta property="og:description" content="Quand les demandes du terrain deviennent des ressources pÃ©dagogiques : dÃ©marches, productions et compÃ©tences des Ã©tudiantÂ·es du cours Â« Professionnalisation & intervention Â»." />
-<!-- âš ï¸ TODO : exporter assets/og-cover.svg en assets/og-cover.png (1200Ã—630 px) et dÃ©poser Ã  la racine -->
+<meta property="og:site_name" content="FPSE — Université de Genève" />
+<meta property="og:title" content="Observatoire des projets étudiants — FPSE, UNIGE" />
+<meta property="og:description" content="Quand les demandes du terrain deviennent des ressources pédagogiques : démarches, productions et compétences des étudiant·es du cours « Professionnalisation & intervention »." />
+<!-- ⚠️ TODO : exporter assets/og-cover.svg en assets/og-cover.png (1200×630 px) et déposer à la racine -->
 <meta property="og:image" content="https://prointer.netlify.app/assets/og-cover.png" />
 <meta property="og:url" content="https://prointer.netlify.app/" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Observatoire des projets Ã©tudiants â€” FPSE, UNIGE" />
-<meta name="twitter:description" content="Quand les demandes du terrain deviennent des ressources pÃ©dagogiques." />
+<meta name="twitter:title" content="Observatoire des projets étudiants — FPSE, UNIGE" />
+<meta name="twitter:description" content="Quand les demandes du terrain deviennent des ressources pédagogiques." />
 <meta name="twitter:image" content="https://prointer.netlify.app/assets/og-cover.png" />
 
 <style>
 /* ============================================================
-   TheSans â€” police institutionnelle UNIGE (auto-hÃ©bergÃ©e)
+   TheSans — police institutionnelle UNIGE (auto-hébergée)
    ============================================================ */
 @font-face{font-family:"TheSans";src:url("fonts/TheSansOsF-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap}
 @font-face{font-family:"TheSans";src:url("fonts/TheSansOsF-Plain.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
@@ -35,12 +35,12 @@
 @font-face{font-family:"TheSans";src:url("fonts/TheSansOsF-ExtraBold.otf") format("opentype");font-weight:800;font-style:normal;font-display:swap}
 
 /* ============================================================
-   Tokens â€” charte UNIGE / FPSE
+   Tokens — charte UNIGE / FPSE
    ============================================================ */
 :root{
   --teal:#00B1AE;          /* couleur officielle FPSE */
   --teal-deep:#00857F;     /* version assombrie, texte & contraste */
-  --teal-ink:#0A4C4A;      /* texte sur fond clair teintÃ© */
+  --teal-ink:#0A4C4A;      /* texte sur fond clair teinté */
   --rose:#CF0063;          /* couleur institutionnelle UNIGE (accent) */
   --rose-deep:#A8004F;
   --ink:#172033;
@@ -49,8 +49,8 @@
   --line-strong:#D4D9E0;
   --bg:#FFFFFF;
   --bg-soft:#F6F8F8;
-  --bg-teal:#EAF6F5;       /* aplat teal trÃ¨s clair */
-  --bg-rose:#FBEAF1;       /* aplat rose trÃ¨s clair */
+  --bg-teal:#EAF6F5;       /* aplat teal très clair */
+  --bg-rose:#FBEAF1;       /* aplat rose très clair */
   --font:"TheSans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --content:min(1280px,calc(100vw - 48px));
   --radius:14px;
@@ -90,7 +90,7 @@ h1,h2,h3,h4{margin:0}
 }
 
 /* ============================================================
-   En-tÃªte institutionnel
+   En-tête institutionnel
    ============================================================ */
 .topstrip{background:var(--rose);height:5px}
 .topbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
@@ -107,7 +107,7 @@ h1,h2,h3,h4{margin:0}
 .burger svg{width:22px;height:22px}
 
 /* ============================================================
-   Sections gÃ©nÃ©riques
+   Sections génériques
    ============================================================ */
 main{display:block}
 section{width:var(--content);margin:auto;padding:clamp(48px,7vw,88px) 0}
@@ -117,7 +117,7 @@ section{width:var(--content);margin:auto;padding:clamp(48px,7vw,88px) 0}
 h2{font-size:clamp(30px,4vw,46px);line-height:1.06;letter-spacing:-.02em;font-weight:800}
 .head p{color:var(--muted);font-size:18px;margin:14px 0 0}
 
-/* ---- HÃ©ros (aplat FPSE) ---------------------------------- */
+/* ---- Héros (aplat FPSE) ---------------------------------- */
 .hero{background:var(--teal-deep);color:#fff}
 .hero-inner{width:var(--content);margin:auto;padding:clamp(52px,7vw,96px) 0 clamp(44px,6vw,72px)}
 .hero .eyebrow{color:#fff;border-left:3px solid var(--rose);padding-left:12px;margin-bottom:22px}
@@ -133,7 +133,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.06;letter-spacing:-.02em;font-we
 .stat strong{display:block;font-size:34px;font-weight:800;line-height:1;letter-spacing:-.02em}
 .stat span{display:block;font-size:14px;color:rgba(255,255,255,.82);margin-top:6px}
 
-/* ---- MÃ©thode --------------------------------------------- */
+/* ---- Méthode --------------------------------------------- */
 .method{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .method>section{padding-bottom:clamp(40px,6vw,72px)}
 .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -176,7 +176,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.06;letter-spacing:-.02em;font-we
 .meta{margin-top:auto;display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:14px;margin-top:16px;color:#475467;font-size:13px;font-weight:600}
 .empty{display:none;padding:32px;text-align:center;border:1px dashed var(--line-strong);border-radius:var(--radius);background:var(--bg-soft);color:var(--muted);font-weight:600}
 
-/* ---- Fiches dÃ©taillÃ©es ----------------------------------- */
+/* ---- Fiches détaillées ----------------------------------- */
 .detail{scroll-margin-top:96px;margin-bottom:26px;border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--line)}
 .detail-head{padding:30px clamp(22px,3vw,34px);color:#fff;background:var(--teal-deep);display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
 .detail-head.magenta{background:var(--rose)}
@@ -222,7 +222,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.06;letter-spacing:-.02em;font-we
 .thumbs button.active{border-color:var(--rose)}
 .thumbs img{width:90px;height:60px;object-fit:cover;border-radius:7px;background:var(--bg-soft)}
 
-/* ---- Appel Ã  projets ------------------------------------- */
+/* ---- Appel à projets ------------------------------------- */
 .proposal{background:var(--teal-deep);color:#fff;border-radius:var(--radius);padding:clamp(32px,5vw,56px)}
 .proposal h2{color:#fff}
 .proposal p{font-size:17px;line-height:1.6;color:rgba(255,255,255,.9);max-width:70ch}
@@ -278,7 +278,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.06;letter-spacing:-.02em;font-we
 @media(max-width:600px){.instructor-card{flex-direction:column}.instructor-avatar{width:72px;height:72px}}
 
 /* ============================================================
-   TÃ©moignage commanditaire
+   Témoignage commanditaire
    ============================================================ */
 .testimonial-section{padding:clamp(20px,3vw,28px);border-top:1px solid var(--line)}
 .testimonial-section h4{margin:0 0 14px;color:var(--rose);font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
@@ -291,18 +291,18 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.06;letter-spacing:-.02em;font-we
 .placeholder-inline{color:var(--muted);font-style:normal;opacity:.75}
 
 /* ============================================================
-   RetombÃ©es
+   Retombées
    ============================================================ */
 .retombees{padding:clamp(20px,3vw,28px);border-top:1px solid var(--line);background:var(--bg-soft)}
 .retombees h4{margin:0 0 10px;color:var(--rose);font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
 .detail-head.magenta~.retombees h4{color:var(--teal-deep)}
 .retombees p{color:var(--muted);font-size:15.5px;line-height:1.6;margin:0}
 .todo-badge{display:inline-flex;align-items:center;gap:5px;background:#FFF3CD;color:#7B5A00;border:1px dashed #E0A800;border-radius:6px;padding:3px 10px;font-size:12.5px;font-weight:700;font-style:normal;vertical-align:middle;margin-left:4px}
-/* Masquer les sections vides (placeholder non remplacÃ©) */
+/* Masquer les sections vides (placeholder non remplacé) */
 .testimonial-section:has(.placeholder-inline){display:none}
 .retombees:has(.todo-badge){display:none}
 
-/* ---- AccessibilitÃ© : liens ouvrant dans un nouvel onglet ---- */
+/* ---- Accessibilité : liens ouvrant dans un nouvel onglet ---- */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 a[target="_blank"].btn::after{
   content:"";display:inline-block;width:13px;height:13px;margin-left:6px;flex:none;
@@ -320,7 +320,7 @@ a[target="_blank"].btn::after{
 @media(max-width:760px){#back-top{bottom:16px;right:14px;width:42px;height:42px}}
 
 /* ============================================================
-   Mobile PDF â€” masquer l'iframe, afficher un bouton proÃ©minent
+   Mobile PDF — masquer l'iframe, afficher un bouton proéminent
    ============================================================ */
 @media(max-width:760px){
   .embed-section.has-pdf iframe.embed-frame{display:none}
@@ -329,7 +329,7 @@ a[target="_blank"].btn::after{
 }
 
 /* ============================================================
-   En-tÃªte impression (masquÃ© Ã  l'Ã©cran)
+   En-tête impression (masqué à l'écran)
    ============================================================ */
 #print-header{display:none}
 
@@ -366,30 +366,30 @@ a[target="_blank"].btn::after{
 </style>
 </head>
 <body>
-<!-- En-tÃªte visible uniquement Ã  l'impression -->
+<!-- En-tête visible uniquement à l'impression -->
 <div id="print-header">
-  <img src="assets/logos/logoFPSE.png" alt="FPSE â€” UniversitÃ© de GenÃ¨ve" />
-  <p>Observatoire des projets Ã©tudiants Â· Cours Â« Professionnalisation &amp; intervention Â» Â· FPSE, UniversitÃ© de GenÃ¨ve Â· <em>prointer.netlify.app</em></p>
+  <img src="assets/logos/logoFPSE.png" alt="FPSE — Université de Genève" />
+  <p>Observatoire des projets étudiants · Cours « Professionnalisation &amp; intervention » · FPSE, Université de Genève · <em>prointer.netlify.app</em></p>
 </div>
 
 <div class="topstrip"></div>
 <header class="topbar">
   <nav class="nav">
-    <a class="brand" href="#accueil" aria-label="Accueil â€” Observatoire des projets Ã©tudiants">
-      <img src="assets/logos/logoFPSE.png" alt="FPSE â€” UniversitÃ© de GenÃ¨ve" />
+    <a class="brand" href="#accueil" aria-label="Accueil — Observatoire des projets étudiants">
+      <img src="assets/logos/logoFPSE.png" alt="FPSE — Université de Genève" />
       <span class="divider" aria-hidden="true"></span>
       <span class="titles">
-        <strong>Observatoire des projets Ã©tudiants</strong>
-        <span>Cours Â« Professionnalisation &amp; intervention Â» Â· FPSE</span>
+        <strong>Observatoire des projets étudiants</strong>
+        <span>Cours « Professionnalisation &amp; intervention » · FPSE</span>
       </span>
       <span class="divider" aria-hidden="true"></span>
-      <img src="assets/logos/AFFORDENS_TR.png" alt="AFORDENS â€” Laboratoire" style="height:36px;width:auto" />
+      <img src="assets/logos/AFFORDENS_TR.png" alt="AFORDENS — Laboratoire" style="height:36px;width:auto" />
     </a>
     <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navlinks">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <div class="navlinks" id="navlinks">
-      <a href="#methode">MÃ©thode</a>
+      <a href="#methode">Méthode</a>
       <a href="#projets">Projets</a>
       <a href="#fiches">Fiches projets</a>
       <a href="#commanditaires">Commanditaires</a>
@@ -399,36 +399,36 @@ a[target="_blank"].btn::after{
 </header>
 
 <main>
-<!-- ====================== HÃ‰ROS ====================== -->
+<!-- ====================== HÉROS ====================== -->
 <section class="hero" id="accueil" style="width:auto;padding:0">
   <div class="hero-inner">
-    <span class="eyebrow">PÃ©dagogie par projet Â· demandes rÃ©elles Â· livrables utiles</span>
-    <h1>Quand les demandes du terrain deviennent des ressources pÃ©dagogiques</h1>
-    <p class="lead">Chaque annÃ©e, les Ã©tudiantÂ·es du cours travaillent Ã  partir de problÃ©matiques proposÃ©es par des commanditaires. Cet observatoire valorise leurs dÃ©marches, leurs productions et les compÃ©tences dÃ©veloppÃ©es.</p>
+    <span class="eyebrow">Pédagogie par projet · demandes réelles · livrables utiles</span>
+    <h1>Quand les demandes du terrain deviennent des ressources pédagogiques</h1>
+    <p class="lead">Chaque année, les étudiant·es du cours travaillent à partir de problématiques proposées par des commanditaires. Cet observatoire valorise leurs démarches, leurs productions et les compétences développées.</p>
     <div class="actions">
-      <a class="btn primary" href="#methode">Comprendre la dÃ©marche</a>
-      <a class="btn secondary" href="#projets">DÃ©couvrir les projets</a>
+      <a class="btn primary" href="#methode">Comprendre la démarche</a>
+      <a class="btn secondary" href="#projets">Découvrir les projets</a>
     </div>
     <div class="stats">
-      <div class="stat"><strong>8</strong><span>projets recensÃ©s</span></div>
+      <div class="stat"><strong>8</strong><span>projets recensés</span></div>
       <div class="stat"><strong>7</strong><span>commanditaires</span></div>
-      <div class="stat"><strong>35</strong><span>Ã©tudiantÂ·es impliquÃ©Â·es</span></div>
+      <div class="stat"><strong>35</strong><span>étudiant·es impliqué·es</span></div>
     </div>
   </div>
 </section>
 
-<!-- ====================== MÃ‰THODE ====================== -->
+<!-- ====================== MÉTHODE ====================== -->
 <div class="method">
   <section id="methode">
     <div class="head">
-      <span class="eyebrow">MÃ©thode pÃ©dagogique</span>
-      <h2>Une progression par Ã©tapes</h2>
+      <span class="eyebrow">Méthode pédagogique</span>
+      <h2>Une progression par étapes</h2>
     </div>
     <div class="timeline">
-      <div class="tstep"><div class="num">1</div><h3>Entrer dans la demande</h3><p>DÃ©couvrir les projets, identifier les enjeux et former les groupes.</p></div>
+      <div class="tstep"><div class="num">1</div><h3>Entrer dans la demande</h3><p>Découvrir les projets, identifier les enjeux et former les groupes.</p></div>
       <div class="tstep"><div class="num">2</div><h3>Analyser</h3><p>Comprendre le contexte, les publics, l'existant et les contraintes.</p></div>
-      <div class="tstep"><div class="num">3</div><h3>Concevoir</h3><p>DÃ©finir des objectifs, choisir un format et produire un prototype.</p></div>
-      <div class="tstep"><div class="num">4</div><h3>PrÃ©senter</h3><p>DÃ©fendre les choix, recevoir des retours et finaliser le livrable.</p></div>
+      <div class="tstep"><div class="num">3</div><h3>Concevoir</h3><p>Définir des objectifs, choisir un format et produire un prototype.</p></div>
+      <div class="tstep"><div class="num">4</div><h3>Présenter</h3><p>Défendre les choix, recevoir des retours et finaliser le livrable.</p></div>
     </div>
   </section>
 </div>
@@ -437,359 +437,359 @@ a[target="_blank"].btn::after{
 <section id="projets">
   <div class="head">
     <span class="eyebrow">Galerie</span>
-    <h2>Projets Ã©tudiants</h2>
+    <h2>Projets étudiants</h2>
   </div>
   <div class="filters">
     <div class="filter-grid">
-      <div class="filter"><label for="fy">AnnÃ©e</label><select id="fy"><option value="all">Toutes</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option></select></div>
-      <div class="filter"><label for="ft">ThÃ¨me</label><select id="ft"><option value="all">Tous</option><option value="competences">CompÃ©tences transversales</option><option value="evaluation">Ã‰valuation de formation</option><option value="pedagogie-active">PÃ©dagogie active</option><option value="mediation">MÃ©diation scientifique</option><option value="accueil">Accueil / intÃ©gration</option><option value="pedagogie-univ">PÃ©dagogie universitaire</option></select></div>
-      <div class="filter"><label for="fl">Livrable</label><select id="fl"><option value="all">Tous</option><option value="rapport">Rapport</option><option value="video">VidÃ©o</option><option value="questionnaire">Questionnaire</option><option value="jeu">Jeu sÃ©rieux</option><option value="maquette">Maquette web</option><option value="dispositif">Dispositif</option><option value="podcast">Podcast</option></select></div>
-      <div class="filter"><label for="fs">Commanditaire</label><select id="fs"><option value="all">Tous</option><option value="unige">UNIGE</option><option value="uclouvain">UCLouvain</option><option value="cmq">CMQ</option><option value="iufrs">IUFRS / Lausanne</option><option value="fribourg">Ã‰tat de Fribourg</option></select></div>
-      <div class="filter"><label for="fq">Recherche</label><input id="fq" type="search" placeholder="Titre, public, mot-clÃ©â€¦" /></div>
+      <div class="filter"><label for="fy">Année</label><select id="fy"><option value="all">Toutes</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option></select></div>
+      <div class="filter"><label for="ft">Thème</label><select id="ft"><option value="all">Tous</option><option value="competences">Compétences transversales</option><option value="evaluation">Évaluation de formation</option><option value="pedagogie-active">Pédagogie active</option><option value="mediation">Médiation scientifique</option><option value="accueil">Accueil / intégration</option><option value="pedagogie-univ">Pédagogie universitaire</option></select></div>
+      <div class="filter"><label for="fl">Livrable</label><select id="fl"><option value="all">Tous</option><option value="rapport">Rapport</option><option value="video">Vidéo</option><option value="questionnaire">Questionnaire</option><option value="jeu">Jeu sérieux</option><option value="maquette">Maquette web</option><option value="dispositif">Dispositif</option><option value="podcast">Podcast</option></select></div>
+      <div class="filter"><label for="fs">Commanditaire</label><select id="fs"><option value="all">Tous</option><option value="unige">UNIGE</option><option value="uclouvain">UCLouvain</option><option value="cmq">CMQ</option><option value="iufrs">IUFRS / Lausanne</option><option value="fribourg">État de Fribourg</option></select></div>
+      <div class="filter"><label for="fq">Recherche</label><input id="fq" type="search" placeholder="Titre, public, mot-clé…" /></div>
     </div>
-    <div class="filter-meta"><span id="count">8 projets affichÃ©s</span><button class="reset" id="reset" type="button">RÃ©initialiser</button></div>
+    <div class="filter-meta"><span id="count">8 projets affichés</span><button class="reset" id="reset" type="button">Réinitialiser</button></div>
   </div>
 
   <div class="grid" id="grid">
-    <article class="card" data-year="2026" data-type="competences" data-livrable="rapport" data-sponsor="unige" data-search="parcours competences enquÃªte quantitative rapport unige dife centre carriÃ¨re">
+    <article class="card" data-year="2026" data-type="competences" data-livrable="rapport" data-sponsor="unige" data-search="parcours competences enquête quantitative rapport unige dife centre carrière">
       <div class="cover">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="11" width="3.4" height="7"/><rect x="10.3" y="7" width="3.4" height="11"/><rect x="15.6" y="13" width="3.4" height="5"/></svg></span>
-        <span class="year">2026 Â· Rapport</span>
-        <span class="cover-type">EnquÃªte quantitative</span>
+        <span class="year">2026 · Rapport</span>
+        <span class="cover-type">Enquête quantitative</span>
       </div>
       <div class="card-body">
-        <div class="tags"><span class="tag">2026</span><span class="tag">UNIGE</span><span class="tag">Rapport</span><span class="tag mag">CompÃ©tences</span></div>
-        <h3><a href="#parcours-competences">Parcours compÃ©tences â€” EnquÃªte quantitative</a></h3>
-        <p>Mieux comprendre les besoins et perceptions des Ã©tudiantÂ·es concernant les compÃ©tences transversales.</p>
-        <div class="meta"><span>UNIGE â€” DIFE â€” Centre de carriÃ¨re</span><span>Rapport</span></div>
+        <div class="tags"><span class="tag">2026</span><span class="tag">UNIGE</span><span class="tag">Rapport</span><span class="tag mag">Compétences</span></div>
+        <h3><a href="#parcours-competences">Parcours compétences — Enquête quantitative</a></h3>
+        <p>Mieux comprendre les besoins et perceptions des étudiant·es concernant les compétences transversales.</p>
+        <div class="meta"><span>UNIGE — DIFE — Centre de carrière</span><span>Rapport</span></div>
       </div>
     </article>
 
-    <article class="card" data-year="2026" data-type="competences" data-livrable="video" data-sponsor="unige" data-search="parcours competences micro trottoir video tÃ©moignages unige dife">
+    <article class="card" data-year="2026" data-type="competences" data-livrable="video" data-sponsor="unige" data-search="parcours competences micro trottoir video témoignages unige dife">
       <div class="cover rose">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"/></svg></span>
-        <span class="year">2026 Â· VidÃ©o</span>
+        <span class="year">2026 · Vidéo</span>
         <span class="cover-type">Micro-trottoir</span>
       </div>
       <div class="card-body">
-        <div class="tags"><span class="tag">2026</span><span class="tag">UNIGE</span><span class="tag">VidÃ©o</span><span class="tag mag">CompÃ©tences</span></div>
-        <h3><a href="#parcours-competences-micro-trottoir">Parcours compÃ©tences â€” Micro-trottoir vidÃ©o</a></h3>
-        <p>Recueillir des tÃ©moignages Ã©tudiants sur les compÃ©tences transversales.</p>
-        <div class="meta"><span>UNIGE â€” DIFE â€” Centre de carriÃ¨re</span><span>VidÃ©o</span></div>
+        <div class="tags"><span class="tag">2026</span><span class="tag">UNIGE</span><span class="tag">Vidéo</span><span class="tag mag">Compétences</span></div>
+        <h3><a href="#parcours-competences-micro-trottoir">Parcours compétences — Micro-trottoir vidéo</a></h3>
+        <p>Recueillir des témoignages étudiants sur les compétences transversales.</p>
+        <div class="meta"><span>UNIGE — DIFE — Centre de carrière</span><span>Vidéo</span></div>
       </div>
     </article>
 
     <article class="card" data-year="2026" data-type="evaluation" data-livrable="questionnaire" data-sponsor="uclouvain" data-search="communication non verbale uclouvain questionnaire alumni enseignement">
       <div class="cover">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3.2"/><path d="M5.5 21c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/></svg></span>
-        <span class="year">2026 Â· Questionnaire</span>
+        <span class="year">2026 · Questionnaire</span>
         <span class="cover-type">Communication non verbale</span>
       </div>
       <div class="card-body">
-        <div class="tags"><span class="tag">2026</span><span class="tag">UCLouvain</span><span class="tag">Questionnaire</span><span class="tag mag">Ã‰valuation</span></div>
+        <div class="tags"><span class="tag">2026</span><span class="tag">UCLouvain</span><span class="tag">Questionnaire</span><span class="tag mag">Évaluation</span></div>
         <h3><a href="#communication-non-verbale">Communication non verbale</a></h3>
-        <p>Ã‰valuer Ã  long terme l'impact d'un atelier sur la pratique professionnelle.</p>
+        <p>Évaluer à long terme l'impact d'un atelier sur la pratique professionnelle.</p>
         <div class="meta"><span>UCLouvain</span><span>Questionnaire</span></div>
       </div>
     </article>
 
-    <article class="card" data-year="2026" data-type="pedagogie-active" data-livrable="jeu" data-sponsor="cmq" data-search="mÃ©dicament jeu sÃ©rieux plateau pÃ©dagogique hybride cmq lyon">
+    <article class="card" data-year="2026" data-type="pedagogie-active" data-livrable="jeu" data-sponsor="cmq" data-search="médicament jeu sérieux plateau pédagogique hybride cmq lyon">
       <div class="cover rose">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.1" fill="currentColor"/><circle cx="15" cy="9" r="1.1" fill="currentColor"/><circle cx="9" cy="15" r="1.1" fill="currentColor"/><circle cx="15" cy="15" r="1.1" fill="currentColor"/></svg></span>
-        <span class="year">2026 Â· Jeu sÃ©rieux</span>
-        <span class="cover-type">Le MÃ©dicament en Jeu</span>
+        <span class="year">2026 · Jeu sérieux</span>
+        <span class="cover-type">Le Médicament en Jeu</span>
       </div>
       <div class="card-body">
-        <div class="tags"><span class="tag">2026</span><span class="tag">CMQ</span><span class="tag">Jeu sÃ©rieux</span><span class="tag mag">PÃ©dagogie active</span></div>
-        <h3><a href="#medicament-en-jeu">Le MÃ©dicament en Jeu</a></h3>
-        <p>Transformer une ressource documentaire en jeu sÃ©rieux pÃ©dagogique hybride.</p>
+        <div class="tags"><span class="tag">2026</span><span class="tag">CMQ</span><span class="tag">Jeu sérieux</span><span class="tag mag">Pédagogie active</span></div>
+        <h3><a href="#medicament-en-jeu">Le Médicament en Jeu</a></h3>
+        <p>Transformer une ressource documentaire en jeu sérieux pédagogique hybride.</p>
         <div class="meta"><span>CMQ</span><span>Carrousel</span></div>
       </div>
     </article>
 
-    <article class="card" data-year="2025" data-type="mediation" data-livrable="maquette" data-sponsor="unige" data-search="emotion education Ã©motions site web unige fpse idea mediation scientifique">
+    <article class="card" data-year="2025" data-type="mediation" data-livrable="maquette" data-sponsor="unige" data-search="emotion education émotions site web unige fpse idea mediation scientifique">
       <div class="cover">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg></span>
-        <span class="year">2025 Â· Maquette web</span>
-        <span class="cover-type">Ã‰motion &amp; Ã‰ducation</span>
+        <span class="year">2025 · Maquette web</span>
+        <span class="cover-type">Émotion &amp; Éducation</span>
       </div>
       <div class="card-body">
-        <div class="tags"><span class="tag">2025</span><span class="tag">UNIGE â€” FPSE</span><span class="tag">Maquette web</span><span class="tag mag">MÃ©diation</span></div>
-        <h3><a href="#emotion-education">Ã‰motion et Ã‰ducation</a></h3>
-        <p>Penser l'architecture d'un site pour diffuser des rÃ©sultats de recherche.</p>
-        <div class="meta"><span>UNIGE â€” FPSE</span><span>Genially</span></div>
+        <div class="tags"><span class="tag">2025</span><span class="tag">UNIGE — FPSE</span><span class="tag">Maquette web</span><span class="tag mag">Médiation</span></div>
+        <h3><a href="#emotion-education">Émotion et Éducation</a></h3>
+        <p>Penser l'architecture d'un site pour diffuser des résultats de recherche.</p>
+        <div class="meta"><span>UNIGE — FPSE</span><span>Genially</span></div>
       </div>
     </article>
 
-    <article class="card" data-year="2025" data-type="accueil" data-livrable="dispositif" data-sponsor="iufrs" data-search="communautÃ© apprentissage journÃ©e accueil iufrs lausanne unil chuv">
+    <article class="card" data-year="2025" data-type="accueil" data-livrable="dispositif" data-sponsor="iufrs" data-search="communauté apprentissage journée accueil iufrs lausanne unil chuv">
       <div class="cover rose">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="2.4"/><circle cx="16" cy="9" r="2.4"/><path d="M3.5 19c0-2.5 2-4.3 4.5-4.3s4.5 1.8 4.5 4.3M12.5 18.6c.4-2 2.1-3.4 4.2-3.4 2.3 0 4.2 1.8 4.2 4.3"/></svg></span>
-        <span class="year">2025 Â· JournÃ©e d'accueil</span>
-        <span class="cover-type">CommunautÃ© d'apprentissage</span>
+        <span class="year">2025 · Journée d'accueil</span>
+        <span class="cover-type">Communauté d'apprentissage</span>
       </div>
       <div class="card-body">
         <div class="tags"><span class="tag">2025</span><span class="tag">IUFRS</span><span class="tag">Dispositif</span><span class="tag mag">Accueil</span></div>
-        <h3><a href="#communaute-apprentissage">CommunautÃ© d'apprentissage</a></h3>
-        <p>Rendre des journÃ©es d'accueil plus dynamiques et participatives.</p>
+        <h3><a href="#communaute-apprentissage">Communauté d'apprentissage</a></h3>
+        <p>Rendre des journées d'accueil plus dynamiques et participatives.</p>
         <div class="meta"><span>IUFRS / Lausanne</span><span>PDF</span></div>
       </div>
     </article>
 
-    <article class="card" data-year="2024" data-type="pedagogie-univ" data-livrable="podcast" data-sponsor="unige" data-search="alignement pÃ©dagogique unige pole sea objectifs activitÃ©s evaluation podcast">
+    <article class="card" data-year="2024" data-type="pedagogie-univ" data-livrable="podcast" data-sponsor="unige" data-search="alignement pédagogique unige pole sea objectifs activités evaluation podcast">
       <div class="cover">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span>
-        <span class="year">2024 Â· Podcast</span>
-        <span class="cover-type">Alignement pÃ©dagogique</span>
+        <span class="year">2024 · Podcast</span>
+        <span class="cover-type">Alignement pédagogique</span>
       </div>
       <div class="card-body">
-        <div class="tags"><span class="tag">2024</span><span class="tag">UNIGE</span><span class="tag">Podcast</span><span class="tag mag">PÃ©dagogie universitaire</span></div>
-        <h3><a href="#alignement-pedagogique">Alignement pÃ©dagogique</a></h3>
-        <p>Sensibiliser les enseignantÂ·es universitaires Ã  l'alignement pÃ©dagogique.</p>
-        <div class="meta"><span>UNIGE â€” PÃ´le SEA</span><span>Podcast</span></div>
+        <div class="tags"><span class="tag">2024</span><span class="tag">UNIGE</span><span class="tag">Podcast</span><span class="tag mag">Pédagogie universitaire</span></div>
+        <h3><a href="#alignement-pedagogique">Alignement pédagogique</a></h3>
+        <p>Sensibiliser les enseignant·es universitaires à l'alignement pédagogique.</p>
+        <div class="meta"><span>UNIGE — Pôle SEA</span><span>Podcast</span></div>
       </div>
     </article>
 
-    <article class="card" data-year="2024" data-type="evaluation" data-livrable="questionnaire" data-sponsor="fribourg" data-search="evaluation formation Ã©tat fribourg questionnaire formation continue kirkpatrick guskey">
+    <article class="card" data-year="2024" data-type="evaluation" data-livrable="questionnaire" data-sponsor="fribourg" data-search="evaluation formation état fribourg questionnaire formation continue kirkpatrick guskey">
       <div class="cover rose">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4.5h6V7H9zM8.5 12l2 2 3.5-3.8"/></svg></span>
-        <span class="year">2024 Â· Questionnaire</span>
-        <span class="cover-type">Ã‰valuation formation</span>
+        <span class="year">2024 · Questionnaire</span>
+        <span class="cover-type">Évaluation formation</span>
       </div>
       <div class="card-body">
-        <div class="tags"><span class="tag">2024</span><span class="tag">Ã‰tat de Fribourg</span><span class="tag">Questionnaire</span><span class="tag mag">Ã‰valuation</span></div>
-        <h3><a href="#evaluation-formation">Ã‰valuation formation</a></h3>
-        <p>AmÃ©liorer les questionnaires des formations continues du personnel.</p>
-        <div class="meta"><span>Ã‰tat de Fribourg</span><span>Forms</span></div>
+        <div class="tags"><span class="tag">2024</span><span class="tag">État de Fribourg</span><span class="tag">Questionnaire</span><span class="tag mag">Évaluation</span></div>
+        <h3><a href="#evaluation-formation">Évaluation formation</a></h3>
+        <p>Améliorer les questionnaires des formations continues du personnel.</p>
+        <div class="meta"><span>État de Fribourg</span><span>Forms</span></div>
       </div>
     </article>
   </div>
-  <div class="empty" id="empty">Aucun projet ne correspond Ã  ces filtres.</div>
+  <div class="empty" id="empty">Aucun projet ne correspond à ces filtres.</div>
 </section>
 
 <!-- ====================== FICHES ====================== -->
 <section id="fiches">
   <div class="head">
-    <span class="eyebrow rose">Fiches dÃ©taillÃ©es</span>
+    <span class="eyebrow rose">Fiches détaillées</span>
     <h2>Huit projets de l'observatoire</h2>
   </div>
 
   <article class="detail" id="parcours-competences">
     <div class="detail-head">
-      <div class="detail-title"><h3>Parcours compÃ©tences â€” EnquÃªte quantitative</h3><p>AnnÃ©e : 2026 Â· Commanditaire : UNIGE (DIFE : Centre de carriÃ¨re &amp; OVE)</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/marine-guigon.png" alt="Marine Guigon" /></div><div class="avatar-name">Marine Guigon<span>ChargÃ©e de mission Â« Parcours compÃ©tences Â»</span></div></div><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/jean-francois-stassen.png" alt="Jean-FranÃ§ois Stassen" /></div><div class="avatar-name">Jean-FranÃ§ois Stassen<span>Chef de projet, Observatoire de la vie Ã©tudiante</span></div></div><div class="logo-card"><img src="assets/logos/logoCarriere.jpg" alt="DIFE â€” Centre de carriÃ¨re" /></div></div>
+      <div class="detail-title"><h3>Parcours compétences — Enquête quantitative</h3><p>Année : 2026 · Commanditaire : UNIGE (DIFE : Centre de carrière &amp; OVE)</p></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/marine-guigon.png" alt="Marine Guigon" /></div><div class="avatar-name">Marine Guigon<span>Chargée de mission « Parcours compétences »</span></div></div><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/jean-francois-stassen.png" alt="Jean-François Stassen" /></div><div class="avatar-name">Jean-François Stassen<span>Chef de projet, Observatoire de la vie étudiante</span></div></div><div class="logo-card"><img src="assets/logos/logoCarriere.jpg" alt="DIFE — Centre de carrière" /></div></div>
     </div>
     <div class="detail-grid">
-      <div class="block"><h4>DÃ©fi initial</h4><p>Mieux comprendre les besoins, perceptions et attentes des Ã©tudiantÂ·es concernant les compÃ©tences transversales, afin de soutenir leur employabilitÃ©.</p></div>
-      <div class="block"><h4>Public cible</h4><p>Ã‰tudiantÂ·es de l'UniversitÃ© de GenÃ¨ve, alumni et acteurs institutionnels impliquÃ©s dans l'insertion professionnelle.</p></div>
-      <div class="block"><h4>DÃ©marche menÃ©e</h4><p>Conception d'une enquÃªte quantitative auprÃ¨s des Ã©tudiantÂ·es.</p></div>
-      <div class="block"><h4>Livrable final</h4><p>Rapport de synthÃ¨se dÃ©cisionnelle avec analyses, visualisations et recommandations stratÃ©giques.</p></div>
+      <div class="block"><h4>Défi initial</h4><p>Mieux comprendre les besoins, perceptions et attentes des étudiant·es concernant les compétences transversales, afin de soutenir leur employabilité.</p></div>
+      <div class="block"><h4>Public cible</h4><p>Étudiant·es de l'Université de Genève, alumni et acteurs institutionnels impliqués dans l'insertion professionnelle.</p></div>
+      <div class="block"><h4>Démarche menée</h4><p>Conception d'une enquête quantitative auprès des étudiant·es.</p></div>
+      <div class="block"><h4>Livrable final</h4><p>Rapport de synthèse décisionnelle avec analyses, visualisations et recommandations stratégiques.</p></div>
     </div>
-    <div class="students"><h4>Ã‰tudiantÂ·es</h4><div class="student-list"><span>LÃ©a Boesch</span><span>Fiorella Guida MÃ¼hlig</span><span>Kidus Mengistu</span><span>Gent Sahiti</span><span>InÃ¨s-Joyce Yankov</span></div></div>
-    <div class="embed-section"><h4>Livrable intÃ©grÃ©</h4><iframe class="embed-frame" src="Livrables/Parcours%20comp%C3%A9tences%20-%20Enqu%C3%AAte%20quantitative.pdf#view=FitH" title="Parcours compÃ©tences â€” EnquÃªte quantitative" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="Livrables/Parcours%20comp%C3%A9tences%20-%20Enqu%C3%AAte%20quantitative.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p></div>
+    <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Léa Boesch</span><span>Fiorella Guida Mühlig</span><span>Kidus Mengistu</span><span>Gent Sahiti</span><span>Inès-Joyce Yankov</span></div></div>
+    <div class="embed-section"><h4>Livrable intégré</h4><iframe class="embed-frame" src="Livrables/Parcours%20comp%C3%A9tences%20-%20Enqu%C3%AAte%20quantitative.pdf#view=FitH" title="Parcours compétences — Enquête quantitative" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="Livrables/Parcours%20comp%C3%A9tences%20-%20Enqu%C3%AAte%20quantitative.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p></div>
     <div class="testimonial-section">
       <h4>Ce qu'en dit la commanditaire</h4>
       <div class="quote-card">
-        <blockquote><span class="placeholder-inline">[Citation Ã  ajouter â€” Marine Guigon, DIFE, Centre de carriÃ¨re, UNIGE]</span></blockquote>
-        <cite>Marine Guigon Â· ChargÃ©e de mission Â« Parcours compÃ©tences Â» Â· UNIGE â€” DIFE</cite>
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Marine Guigon, DIFE, Centre de carrière, UNIGE]</span></blockquote>
+        <cite>Marine Guigon · Chargée de mission « Parcours compétences » · UNIGE — DIFE</cite>
       </div>
     </div>
     <div class="retombees">
-      <h4>RetombÃ©es</h4>
-      <p><em class="todo-badge">Ã€ complÃ©ter</em> Le rapport a-t-il Ã©tÃ© transmis Ã  la direction du DIFE ? A-t-il alimentÃ© une dÃ©cision institutionnelle concernant le dispositif Â« Parcours compÃ©tences Â» ?</p>
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> Le rapport a-t-il été transmis à la direction du DIFE ? A-t-il alimenté une décision institutionnelle concernant le dispositif « Parcours compétences » ?</p>
     </div>
   </article>
 
   <article class="detail" id="parcours-competences-micro-trottoir">
     <div class="detail-head">
-      <div class="detail-title"><h3>Parcours compÃ©tences â€” Micro-trottoir vidÃ©o</h3><p>AnnÃ©e : 2026 Â· Commanditaire : UNIGE (DIFE : Centre de carriÃ¨re &amp; OVE)</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/marine-guigon.png" alt="Marine Guigon" /></div><div class="avatar-name">Marine Guigon<span>ChargÃ©e de mission Â« Parcours compÃ©tences Â»</span></div></div><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/jean-francois-stassen.png" alt="Jean-FranÃ§ois Stassen" /></div><div class="avatar-name">Jean-FranÃ§ois Stassen<span>Chef de projet, Observatoire de la vie Ã©tudiante</span></div></div><div class="logo-card"><img src="assets/logos/logoCarriere.jpg" alt="DIFE â€” Centre de carriÃ¨re" /></div></div>
+      <div class="detail-title"><h3>Parcours compétences — Micro-trottoir vidéo</h3><p>Année : 2026 · Commanditaire : UNIGE (DIFE : Centre de carrière &amp; OVE)</p></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/marine-guigon.png" alt="Marine Guigon" /></div><div class="avatar-name">Marine Guigon<span>Chargée de mission « Parcours compétences »</span></div></div><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/jean-francois-stassen.png" alt="Jean-François Stassen" /></div><div class="avatar-name">Jean-François Stassen<span>Chef de projet, Observatoire de la vie étudiante</span></div></div><div class="logo-card"><img src="assets/logos/logoCarriere.jpg" alt="DIFE — Centre de carrière" /></div></div>
     </div>
     <div class="detail-grid">
-      <div class="block"><h4>DÃ©fi initial</h4><p>Mieux comprendre la maniÃ¨re dont les Ã©tudiantÂ·es perÃ§oivent les compÃ©tences transversales.</p></div>
-      <div class="block"><h4>Public cible</h4><p>Ã‰tudiantÂ·es de l'UniversitÃ© de GenÃ¨ve interrogÃ©Â·es sur le campus.</p></div>
-      <div class="block"><h4>DÃ©marche menÃ©e</h4><p>Approche qualitative par entretiens courts de type micro-trottoir.</p></div>
-      <div class="block"><h4>Livrable final</h4><p>VidÃ©o de micro-trottoir exploitable comme support de rÃ©flexion et de communication.</p></div>
+      <div class="block"><h4>Défi initial</h4><p>Mieux comprendre la manière dont les étudiant·es perçoivent les compétences transversales.</p></div>
+      <div class="block"><h4>Public cible</h4><p>Étudiant·es de l'Université de Genève interrogé·es sur le campus.</p></div>
+      <div class="block"><h4>Démarche menée</h4><p>Approche qualitative par entretiens courts de type micro-trottoir.</p></div>
+      <div class="block"><h4>Livrable final</h4><p>Vidéo de micro-trottoir exploitable comme support de réflexion et de communication.</p></div>
     </div>
-    <div class="students"><h4>Ã‰tudiantÂ·es</h4><div class="student-list"><span>CÃ©cile Bertschmann</span><span>AmÃ¨le Adda</span><span>LÃ©o Bonnal</span><span>SoukaÃ¯na Ajouaou</span><span>Joman Atwan</span></div></div>
-    <div class="embed-section"><h4>Livrable intÃ©grÃ©</h4><div class="embed-video"><iframe src="https://player.vod2.infomaniak.com/embed/1jijk03uk2q73" allowfullscreen crossorigin="anonymous" allow="autoplay; fullscreen; picture-in-picture" title="Parcours compÃ©tences â€” Micro-trottoir vidÃ©o" loading="lazy"></iframe></div></div>
+    <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Cécile Bertschmann</span><span>Amèle Adda</span><span>Léo Bonnal</span><span>Soukaïna Ajouaou</span><span>Joman Atwan</span></div></div>
+    <div class="embed-section"><h4>Livrable intégré</h4><div class="embed-video"><iframe src="https://player.vod2.infomaniak.com/embed/1jijk03uk2q73" allowfullscreen crossorigin="anonymous" allow="autoplay; fullscreen; picture-in-picture" title="Parcours compétences — Micro-trottoir vidéo" loading="lazy"></iframe></div></div>
     <div class="testimonial-section">
       <h4>Ce qu'en dit la commanditaire</h4>
       <div class="quote-card">
-        <blockquote><span class="placeholder-inline">[Citation Ã  ajouter â€” Marine Guigon, DIFE, Centre de carriÃ¨re, UNIGE]</span></blockquote>
-        <cite>Marine Guigon Â· ChargÃ©e de mission Â« Parcours compÃ©tences Â» Â· UNIGE â€” DIFE</cite>
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Marine Guigon, DIFE, Centre de carrière, UNIGE]</span></blockquote>
+        <cite>Marine Guigon · Chargée de mission « Parcours compétences » · UNIGE — DIFE</cite>
       </div>
     </div>
     <div class="retombees">
-      <h4>RetombÃ©es</h4>
-      <p><em class="todo-badge">Ã€ complÃ©ter</em> La vidÃ©o a-t-elle Ã©tÃ© diffusÃ©e ? Sur quel canal (site UNIGE, rÃ©seaux sociaux, Ã©vÃ©nements) ? A-t-elle servi de support de communication pour le dispositif ?</p>
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> La vidéo a-t-elle été diffusée ? Sur quel canal (site UNIGE, réseaux sociaux, événements) ? A-t-elle servi de support de communication pour le dispositif ?</p>
     </div>
   </article>
 
   <article class="detail" id="communication-non-verbale">
     <div class="detail-head magenta">
-      <div class="detail-title"><h3>Communication non verbale</h3><p>AnnÃ©e : 2026 Â· Commanditaire : UCLouvain</p></div>
+      <div class="detail-title"><h3>Communication non verbale</h3><p>Année : 2026 · Commanditaire : UCLouvain</p></div>
       <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/mathieu-couplet.png" alt="Mathieu Couplet" /></div><div class="avatar-name">Mathieu Couplet<span>Enseignant en communication non-verbale</span></div></div><div class="logo-card"><img src="assets/logos/logoUCL.png" alt="UCLouvain" /></div></div>
     </div>
     <div class="detail-grid">
-      <div class="block"><h4>DÃ©fi initial</h4><p>Ã‰valuer si les compÃ©tences travaillÃ©es dans un atelier de communication non verbale sont rÃ©utilisÃ©es dans la pratique enseignante.</p></div>
+      <div class="block"><h4>Défi initial</h4><p>Évaluer si les compétences travaillées dans un atelier de communication non verbale sont réutilisées dans la pratique enseignante.</p></div>
       <div class="block"><h4>Public cible</h4><p>Alumni ayant suivi l'atelier et actuellement en situation professionnelle.</p></div>
-      <div class="block"><h4>DÃ©marche menÃ©e</h4><p>Conception d'un questionnaire rÃ©utilisable combinant plusieurs types de questions.</p></div>
-      <div class="block"><h4>Livrable final</h4><p>Questionnaire d'Ã©valuation Ã  long terme.</p></div>
+      <div class="block"><h4>Démarche menée</h4><p>Conception d'un questionnaire réutilisable combinant plusieurs types de questions.</p></div>
+      <div class="block"><h4>Livrable final</h4><p>Questionnaire d'évaluation à long terme.</p></div>
     </div>
-    <div class="students"><h4>Ã‰tudiantÂ·es</h4><div class="student-list"><span>Alejandra Guidi</span><span>Kalliopi Michopoulou</span><span>Marianne Paredes Gonzalez</span><span>Wiam Tajeddine</span><span>Mohamed Naggay</span></div></div>
-    <div class="embed-section"><h4>Livrable intÃ©grÃ©</h4><iframe class="embed-frame" src="Livrables/Communication%20non%20verbale.html" title="Communication non verbale" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="Livrables/Communication%20non%20verbale.html" target="_blank" rel="noopener">Ouvrir le livrable dans un nouvel onglet</a></p><h4 style="margin-top:28px">Questionnaire en ligne</h4><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9ewPNtsh5sLJ5ilXiDrTHiejW3xRfMJVomNrELf8U2TcI4Q/viewform?embedded=true" class="embed-frame" title="Questionnaire â€” Communication non verbale" loading="lazy">Chargementâ€¦</iframe><p class="embed-note"><a class="btn secondary" href="https://forms.gle/sCZ6Xyiq1LCZzkJv8" target="_blank" rel="noopener">Ouvrir le questionnaire dans un nouvel onglet</a></p></div>
+    <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Alejandra Guidi</span><span>Kalliopi Michopoulou</span><span>Marianne Paredes Gonzalez</span><span>Wiam Tajeddine</span><span>Mohamed Naggay</span></div></div>
+    <div class="embed-section"><h4>Livrable intégré</h4><iframe class="embed-frame" src="Livrables/Communication%20non%20verbale.html" title="Communication non verbale" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="Livrables/Communication%20non%20verbale.html" target="_blank" rel="noopener">Ouvrir le livrable dans un nouvel onglet</a></p><h4 style="margin-top:28px">Questionnaire en ligne</h4><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9ewPNtsh5sLJ5ilXiDrTHiejW3xRfMJVomNrELf8U2TcI4Q/viewform?embedded=true" class="embed-frame" title="Questionnaire — Communication non verbale" loading="lazy">Chargement…</iframe><p class="embed-note"><a class="btn secondary" href="https://forms.gle/sCZ6Xyiq1LCZzkJv8" target="_blank" rel="noopener">Ouvrir le questionnaire dans un nouvel onglet</a></p></div>
     <div class="testimonial-section">
       <h4>Ce qu'en dit le commanditaire</h4>
       <div class="quote-card">
-        <blockquote><span class="placeholder-inline">[Citation Ã  ajouter â€” Mathieu Couplet, UCLouvain]</span></blockquote>
-        <cite>Mathieu Couplet Â· Enseignant en communication non-verbale Â· UCLouvain</cite>
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Mathieu Couplet, UCLouvain]</span></blockquote>
+        <cite>Mathieu Couplet · Enseignant en communication non-verbale · UCLouvain</cite>
       </div>
     </div>
     <div class="retombees">
-      <h4>RetombÃ©es</h4>
-      <p><em class="todo-badge">Ã€ complÃ©ter</em> Le questionnaire a-t-il Ã©tÃ© envoyÃ© aux alumni ? Combien de rÃ©ponses ont Ã©tÃ© recueillies ? Les rÃ©sultats ont-ils modifiÃ© le contenu ou le format de l'atelier ?</p>
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> Le questionnaire a-t-il été envoyé aux alumni ? Combien de réponses ont été recueillies ? Les résultats ont-ils modifié le contenu ou le format de l'atelier ?</p>
     </div>
   </article>
 
   <article class="detail" id="medicament-en-jeu">
     <div class="detail-head">
-      <div class="detail-title"><h3>Le MÃ©dicament en Jeu</h3><p>AnnÃ©e : 2026 Â· Commanditaire : CMQ</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/maud-bernies.png" alt="Maud Bernies" /></div><div class="avatar-name">Maud Bernies<span>Directrice CMQe Â« Biotech SantÃ© Â»</span></div></div><div class="logo-card tall"><img src="assets/logos/logoCMQ.jpg" alt="CMQ Lyon" /></div></div>
+      <div class="detail-title"><h3>Le Médicament en Jeu</h3><p>Année : 2026 · Commanditaire : CMQ</p></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/maud-bernies.png" alt="Maud Bernies" /></div><div class="avatar-name">Maud Bernies<span>Directrice CMQe « Biotech Santé »</span></div></div><div class="logo-card tall"><img src="assets/logos/logoCMQ.jpg" alt="CMQ Lyon" /></div></div>
     </div>
     <div class="detail-grid">
-      <div class="block"><h4>DÃ©fi initial</h4><p>Transformer une ressource existante sur le mÃ©dicament en dispositif pÃ©dagogique actif et ludique.</p></div>
-      <div class="block"><h4>Public cible</h4><p>Ã‰tudiantÂ·es en BTS Biotechnologies Recherche et Production.</p></div>
-      <div class="block"><h4>DÃ©marche menÃ©e</h4><p>ScÃ©narisation d'un parcours pÃ©dagogique avec questions, cas pratiques, dÃ©fis et dÃ©bat final.</p></div>
-      <div class="block"><h4>Livrable final</h4><p>Jeu sÃ©rieux pÃ©dagogique hybride comprenant un plateau, une interface projetÃ©e, une banque de questions, des fiches et un guide d'utilisation.</p></div>
+      <div class="block"><h4>Défi initial</h4><p>Transformer une ressource existante sur le médicament en dispositif pédagogique actif et ludique.</p></div>
+      <div class="block"><h4>Public cible</h4><p>Étudiant·es en BTS Biotechnologies Recherche et Production.</p></div>
+      <div class="block"><h4>Démarche menée</h4><p>Scénarisation d'un parcours pédagogique avec questions, cas pratiques, défis et débat final.</p></div>
+      <div class="block"><h4>Livrable final</h4><p>Jeu sérieux pédagogique hybride comprenant un plateau, une interface projetée, une banque de questions, des fiches et un guide d'utilisation.</p></div>
     </div>
-    <div class="students"><h4>Ã‰tudiantÂ·es</h4><div class="student-list"><span>Ludovic Pasquier</span><span>Celestin Tanari</span><span>Christian Sorgho</span><span>Marco AndrÃ©a Scorti</span><span>FrÃ©dÃ©ric Auderset</span></div></div>
-    <div class="embed-section"><h4>Livrable intÃ©grÃ©</h4><div id="medicament-carousel" class="carousel"></div></div>
+    <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Ludovic Pasquier</span><span>Celestin Tanari</span><span>Christian Sorgho</span><span>Marco Andréa Scorti</span><span>Frédéric Auderset</span></div></div>
+    <div class="embed-section"><h4>Livrable intégré</h4><div id="medicament-carousel" class="carousel"></div></div>
     <div class="testimonial-section">
       <h4>Ce qu'en dit la commanditaire</h4>
       <div class="quote-card">
-        <blockquote><span class="placeholder-inline">[Citation Ã  ajouter â€” Maud Bernies, CMQ Lyon]</span></blockquote>
-        <cite>Maud Bernies Â· Directrice CMQe Â« Biotech SantÃ© Â» Â· CMQ Lyon</cite>
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Maud Bernies, CMQ Lyon]</span></blockquote>
+        <cite>Maud Bernies · Directrice CMQe « Biotech Santé » · CMQ Lyon</cite>
       </div>
     </div>
     <div class="retombees">
-      <h4>RetombÃ©es</h4>
-      <p><em class="todo-badge">Ã€ complÃ©ter</em> Le jeu sÃ©rieux a-t-il Ã©tÃ© testÃ© en sÃ©ance rÃ©elle avec des apprenants BTS ? Le CMQ prÃ©voit-il de l'intÃ©grer Ã  son programme de formation ?</p>
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> Le jeu sérieux a-t-il été testé en séance réelle avec des apprenants BTS ? Le CMQ prévoit-il de l'intégrer à son programme de formation ?</p>
     </div>
   </article>
 
   <article class="detail" id="emotion-education">
     <div class="detail-head magenta">
-      <div class="detail-title"><h3>Ã‰motion et Ã‰ducation</h3><p>AnnÃ©e : 2025 Â· Commanditaire : UNIGE (FPSE)</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/nathalie-mella.png" alt="Nathalie Mella" /></div><div class="avatar-name">Nathalie Mella<span>ChargÃ©e de cours</span></div></div><div class="logo-card"><img src="assets/logos/logoFPSE.png" alt="UNIGE â€” FPSE" /></div><div class="logo-card small logo-idea">IDEA</div></div>
+      <div class="detail-title"><h3>Émotion et Éducation</h3><p>Année : 2025 · Commanditaire : UNIGE (FPSE)</p></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/nathalie-mella.png" alt="Nathalie Mella" /></div><div class="avatar-name">Nathalie Mella<span>Chargée de cours</span></div></div><div class="logo-card"><img src="assets/logos/logoFPSE.png" alt="UNIGE — FPSE" /></div><div class="logo-card small logo-idea">IDEA</div></div>
     </div>
     <div class="detail-grid">
-      <div class="block"><h4>DÃ©fi initial</h4><p>Penser l'architecture d'un site destinÃ© Ã  diffuser des rÃ©sultats de recherche sur les liens entre Ã©motion et Ã©ducation.</p></div>
-      <div class="block"><h4>Public cible</h4><p>EnseignantÂ·es, Ã©ducateurs/trices, directions, infirmiers/Ã¨res scolaires et praticienÂ·nes de l'Ã©ducation.</p></div>
-      <div class="block"><h4>DÃ©marche menÃ©e</h4><p>Analyse du besoin de mÃ©diation scientifique et rÃ©flexion sur l'organisation des contenus.</p></div>
+      <div class="block"><h4>Défi initial</h4><p>Penser l'architecture d'un site destiné à diffuser des résultats de recherche sur les liens entre émotion et éducation.</p></div>
+      <div class="block"><h4>Public cible</h4><p>Enseignant·es, éducateurs/trices, directions, infirmiers/ères scolaires et praticien·nes de l'éducation.</p></div>
+      <div class="block"><h4>Démarche menée</h4><p>Analyse du besoin de médiation scientifique et réflexion sur l'organisation des contenus.</p></div>
       <div class="block"><h4>Livrable final</h4><p>Maquette de site web.</p></div>
     </div>
-    <div class="students"><h4>Ã‰tudiantÂ·es</h4><div class="student-list"><span>AnaÃ«lle Roduit</span><span>ThÃ©o Keel</span></div></div>
-    <div class="embed-section"><h4>Livrable intÃ©grÃ©</h4><iframe class="embed-frame" src="https://view.genially.com/681a3fa50c54fc73aa5ba3b0" title="Maquette Genially â€” Ã‰motion et Ã‰ducation" allowfullscreen loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="https://view.genially.com/681a3fa50c54fc73aa5ba3b0" target="_blank" rel="noopener">Ouvrir le Genially dans un nouvel onglet</a></p></div>
+    <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Anaëlle Roduit</span><span>Théo Keel</span></div></div>
+    <div class="embed-section"><h4>Livrable intégré</h4><iframe class="embed-frame" src="https://view.genially.com/681a3fa50c54fc73aa5ba3b0" title="Maquette Genially — Émotion et Éducation" allowfullscreen loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="https://view.genially.com/681a3fa50c54fc73aa5ba3b0" target="_blank" rel="noopener">Ouvrir le Genially dans un nouvel onglet</a></p></div>
     <div class="testimonial-section">
       <h4>Ce qu'en dit la commanditaire</h4>
       <div class="quote-card">
-        <blockquote><span class="placeholder-inline">[Citation Ã  ajouter â€” Nathalie Mella, UNIGE â€” FPSE]</span></blockquote>
-        <cite>Nathalie Mella Â· ChargÃ©e de cours Â· UNIGE â€” FPSE</cite>
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Nathalie Mella, UNIGE — FPSE]</span></blockquote>
+        <cite>Nathalie Mella · Chargée de cours · UNIGE — FPSE</cite>
       </div>
     </div>
     <div class="retombees">
-      <h4>RetombÃ©es</h4>
-      <p><em class="todo-badge">Ã€ complÃ©ter</em> La maquette a-t-elle servi de base pour le dÃ©veloppement d'un vrai site ? Le projet de mÃ©diation scientifique a-t-il Ã©tÃ© soumis Ã  financement ?</p>
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> La maquette a-t-elle servi de base pour le développement d'un vrai site ? Le projet de médiation scientifique a-t-il été soumis à financement ?</p>
     </div>
   </article>
 
   <article class="detail" id="communaute-apprentissage">
     <div class="detail-head">
-      <div class="detail-title"><h3>CommunautÃ© d'apprentissage</h3><p>AnnÃ©e : 2025 Â· Commanditaire : IUFRS / Lausanne</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/gaetan-moerman.png" alt="GaÃ«tan Moerman" /></div><div class="avatar-name">GaÃ«tan Moerman<span>Conseiller pÃ©dagogique</span></div></div><div class="logo-card"><img src="assets/logos/logoIUFRS.png" alt="IUFRS â€” UniversitÃ© de Lausanne" /></div></div>
+      <div class="detail-title"><h3>Communauté d'apprentissage</h3><p>Année : 2025 · Commanditaire : IUFRS / Lausanne</p></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/gaetan-moerman.png" alt="Gaëtan Moerman" /></div><div class="avatar-name">Gaëtan Moerman<span>Conseiller pédagogique</span></div></div><div class="logo-card"><img src="assets/logos/logoIUFRS.png" alt="IUFRS — Université de Lausanne" /></div></div>
     </div>
     <div class="detail-grid">
-      <div class="block"><h4>DÃ©fi initial</h4><p>Rendre les journÃ©es d'accueil de l'IUFRS plus dynamiques, participatives et intÃ©gratives.</p></div>
-      <div class="block"><h4>Public cible</h4><p>Nouveaux Ã©tudiantÂ·es, enseignantÂ·es, intervenantÂ·es, tuteurs/trices et responsables administratifs.</p></div>
-      <div class="block"><h4>DÃ©marche menÃ©e</h4><p>RÃ©flexion sur des activitÃ©s favorisant les rencontres et le sentiment d'appartenance.</p></div>
-      <div class="block"><h4>Livrable final</h4><p>Dispositif pour une journÃ©e d'accueil participative ou scÃ©nario d'activitÃ©s.</p></div>
+      <div class="block"><h4>Défi initial</h4><p>Rendre les journées d'accueil de l'IUFRS plus dynamiques, participatives et intégratives.</p></div>
+      <div class="block"><h4>Public cible</h4><p>Nouveaux étudiant·es, enseignant·es, intervenant·es, tuteurs/trices et responsables administratifs.</p></div>
+      <div class="block"><h4>Démarche menée</h4><p>Réflexion sur des activités favorisant les rencontres et le sentiment d'appartenance.</p></div>
+      <div class="block"><h4>Livrable final</h4><p>Dispositif pour une journée d'accueil participative ou scénario d'activités.</p></div>
     </div>
-    <div class="students"><h4>Ã‰tudiantÂ·es</h4><div class="student-list"><span>Angela Diaz</span><span>Kasia Dobrzynska</span><span>Isabel Guillinta</span></div></div>
-    <div class="embed-section"><h4>Livrable intÃ©grÃ©</h4><iframe class="embed-frame" src="Livrables/Communaute.pdf" title="CommunautÃ© d'apprentissage" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="Livrables/Communaute.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p></div>
+    <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Angela Diaz</span><span>Kasia Dobrzynska</span><span>Isabel Guillinta</span></div></div>
+    <div class="embed-section"><h4>Livrable intégré</h4><iframe class="embed-frame" src="Livrables/Communaute.pdf" title="Communauté d'apprentissage" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="Livrables/Communaute.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p></div>
     <div class="testimonial-section">
       <h4>Ce qu'en dit le commanditaire</h4>
       <div class="quote-card">
-        <blockquote><span class="placeholder-inline">[Citation Ã  ajouter â€” GaÃ«tan Moerman, IUFRS / Lausanne]</span></blockquote>
-        <cite>GaÃ«tan Moerman Â· Conseiller pÃ©dagogique Â· IUFRS â€” UniversitÃ© de Lausanne</cite>
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Gaëtan Moerman, IUFRS / Lausanne]</span></blockquote>
+        <cite>Gaëtan Moerman · Conseiller pédagogique · IUFRS — Université de Lausanne</cite>
       </div>
     </div>
     <div class="retombees">
-      <h4>RetombÃ©es</h4>
-      <p><em class="todo-badge">Ã€ complÃ©ter</em> Le dispositif a-t-il Ã©tÃ© mis en Å“uvre lors d'une journÃ©e d'accueil Ã  l'IUFRS ? Quels retours les participantÂ·es ont-ils exprimÃ©s ?</p>
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> Le dispositif a-t-il été mis en œuvre lors d'une journée d'accueil à l'IUFRS ? Quels retours les participant·es ont-ils exprimés ?</p>
     </div>
   </article>
 
   <article class="detail" id="alignement-pedagogique">
     <div class="detail-head">
-      <div class="detail-title"><h3>Alignement pÃ©dagogique</h3><p>AnnÃ©e : 2024 Â· Commanditaire : UNIGE (PÃ´le SEA)</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/catherine-huneault.png" alt="Catherine Huneault" /></div><div class="avatar-name">Catherine Huneault<span>Responsable dÃ©veloppement et qualitÃ© des cursus</span></div></div><div class="logo-card"><img src="assets/logos/logoSEA.png" alt="PÃ´le SEA â€” UniversitÃ© de GenÃ¨ve" /></div></div>
+      <div class="detail-title"><h3>Alignement pédagogique</h3><p>Année : 2024 · Commanditaire : UNIGE (Pôle SEA)</p></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/catherine-huneault.png" alt="Catherine Huneault" /></div><div class="avatar-name">Catherine Huneault<span>Responsable développement et qualité des cursus</span></div></div><div class="logo-card"><img src="assets/logos/logoSEA.png" alt="Pôle SEA — Université de Genève" /></div></div>
     </div>
     <div class="detail-grid">
-      <div class="block"><h4>DÃ©fi initial</h4><p>Sensibiliser les enseignantÂ·es universitaires Ã  l'alignement pÃ©dagogique.</p></div>
-      <div class="block"><h4>Public cible</h4><p>EnseignantÂ·es universitaires et participantÂ·es aux formations du PÃ´le SEA.</p></div>
-      <div class="block"><h4>DÃ©marche menÃ©e</h4><p>Analyse de supports existants et comparaison de formats : vidÃ©o, dÃ©pliant, podcast.</p></div>
-      <div class="block"><h4>Livrable final</h4><p>Podcast de sensibilisation Ã  l'alignement pÃ©dagogique.</p></div>
+      <div class="block"><h4>Défi initial</h4><p>Sensibiliser les enseignant·es universitaires à l'alignement pédagogique.</p></div>
+      <div class="block"><h4>Public cible</h4><p>Enseignant·es universitaires et participant·es aux formations du Pôle SEA.</p></div>
+      <div class="block"><h4>Démarche menée</h4><p>Analyse de supports existants et comparaison de formats : vidéo, dépliant, podcast.</p></div>
+      <div class="block"><h4>Livrable final</h4><p>Podcast de sensibilisation à l'alignement pédagogique.</p></div>
     </div>
-    <div class="students"><h4>Ã‰tudiantÂ·es</h4><div class="student-list"><span>LÃ©a ItiÃ©</span><span>Aylin Cretegny</span><span>Maya Chacon Moran</span><span>Elena Diz</span><span>Ima Jimenez</span><span>InÃ¨s Derouiche</span></div></div>
-    <div class="embed-section"><h4>Livrable intÃ©grÃ©</h4><div class="embed-video"><iframe src="https://player.vod2.infomaniak.com/embed/1jijk03uk2q6t" allowfullscreen crossorigin="anonymous" allow="autoplay; fullscreen; picture-in-picture" title="Alignement pÃ©dagogique" loading="lazy"></iframe></div></div>
+    <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Léa Itié</span><span>Aylin Cretegny</span><span>Maya Chacon Moran</span><span>Elena Diz</span><span>Ima Jimenez</span><span>Inès Derouiche</span></div></div>
+    <div class="embed-section"><h4>Livrable intégré</h4><div class="embed-video"><iframe src="https://player.vod2.infomaniak.com/embed/1jijk03uk2q6t" allowfullscreen crossorigin="anonymous" allow="autoplay; fullscreen; picture-in-picture" title="Alignement pédagogique" loading="lazy"></iframe></div></div>
     <div class="testimonial-section">
       <h4>Ce qu'en dit la commanditaire</h4>
       <div class="quote-card">
-        <blockquote><span class="placeholder-inline">[Citation Ã  ajouter â€” Catherine Huneault, PÃ´le SEA, UNIGE]</span></blockquote>
-        <cite>Catherine Huneault Â· Responsable dÃ©veloppement et qualitÃ© des cursus Â· UNIGE â€” PÃ´le SEA</cite>
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Catherine Huneault, Pôle SEA, UNIGE]</span></blockquote>
+        <cite>Catherine Huneault · Responsable développement et qualité des cursus · UNIGE — Pôle SEA</cite>
       </div>
     </div>
     <div class="retombees">
-      <h4>RetombÃ©es</h4>
-      <p><em class="todo-badge">Ã€ complÃ©ter</em> Le podcast a-t-il Ã©tÃ© intÃ©grÃ© aux ressources du PÃ´le SEA ? A-t-il Ã©tÃ© diffusÃ© dans les formations pour enseignantÂ·es universitaires ?</p>
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> Le podcast a-t-il été intégré aux ressources du Pôle SEA ? A-t-il été diffusé dans les formations pour enseignant·es universitaires ?</p>
     </div>
   </article>
 
   <article class="detail" id="evaluation-formation">
     <div class="detail-head magenta">
-      <div class="detail-title"><h3>Ã‰valuation formation</h3><p>AnnÃ©e : 2024 Â· Commanditaire : Ã‰tat de Fribourg</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/sophie-margaronis.png" alt="Sophie Margaronis" /></div><div class="avatar-name">Sophie Margaronis<span>Responsable du programme de formation continue</span></div></div><div class="logo-card small"><img src="assets/logos/logoFribourg.png" alt="Ã‰tat de Fribourg" /></div></div>
+      <div class="detail-title"><h3>Évaluation formation</h3><p>Année : 2024 · Commanditaire : État de Fribourg</p></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/sophie-margaronis.png" alt="Sophie Margaronis" /></div><div class="avatar-name">Sophie Margaronis<span>Responsable du programme de formation continue</span></div></div><div class="logo-card small"><img src="assets/logos/logoFribourg.png" alt="État de Fribourg" /></div></div>
     </div>
     <div class="detail-grid">
-      <div class="block"><h4>DÃ©fi initial</h4><p>AmÃ©liorer les questionnaires d'Ã©valuation des formations continues proposÃ©es au personnel de l'Ã‰tat de Fribourg.</p></div>
-      <div class="block"><h4>Public cible</h4><p>Personnel de l'Ã‰tat de Fribourg, cadres, collaborateur/trices, apprentiÂ·es et responsables de formation.</p></div>
-      <div class="block"><h4>DÃ©marche menÃ©e</h4><p>Analyse des questionnaires existants Ã  partir de cadres thÃ©oriques de l'Ã©valuation de la formation.</p></div>
-      <div class="block"><h4>Livrable final</h4><p>Questionnaire d'Ã©valuation de formation.</p></div>
+      <div class="block"><h4>Défi initial</h4><p>Améliorer les questionnaires d'évaluation des formations continues proposées au personnel de l'État de Fribourg.</p></div>
+      <div class="block"><h4>Public cible</h4><p>Personnel de l'État de Fribourg, cadres, collaborateur/trices, apprenti·es et responsables de formation.</p></div>
+      <div class="block"><h4>Démarche menée</h4><p>Analyse des questionnaires existants à partir de cadres théoriques de l'évaluation de la formation.</p></div>
+      <div class="block"><h4>Livrable final</h4><p>Questionnaire d'évaluation de formation.</p></div>
     </div>
-    <div class="students"><h4>Ã‰tudiantÂ·es</h4><div class="student-list"><span>Brendiana Misini</span><span>Catherine de Vos</span><span>Florence Bremnes Mayenson</span><span>Lazarine Raissa NombrÃ©</span></div></div>
-    <div class="embed-section"><h4>Livrable intÃ©grÃ©</h4><iframe class="embed-frame" src="https://forms.office.com/e/0yrGm07VYH" title="Questionnaire Forms â€” Ã‰valuation formation" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="https://forms.office.com/e/0yrGm07VYH" target="_blank" rel="noopener">Ouvrir le questionnaire dans un nouvel onglet</a></p></div>
+    <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Brendiana Misini</span><span>Catherine de Vos</span><span>Florence Bremnes Mayenson</span><span>Lazarine Raissa Nombré</span></div></div>
+    <div class="embed-section"><h4>Livrable intégré</h4><iframe class="embed-frame" src="https://forms.office.com/e/0yrGm07VYH" title="Questionnaire Forms — Évaluation formation" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="https://forms.office.com/e/0yrGm07VYH" target="_blank" rel="noopener">Ouvrir le questionnaire dans un nouvel onglet</a></p></div>
     <div class="testimonial-section">
       <h4>Ce qu'en dit la commanditaire</h4>
       <div class="quote-card">
-        <blockquote><span class="placeholder-inline">[Citation Ã  ajouter â€” Sophie Margaronis, Ã‰tat de Fribourg]</span></blockquote>
-        <cite>Sophie Margaronis Â· Responsable du programme de formation continue Â· Ã‰tat de Fribourg</cite>
+        <blockquote><span class="placeholder-inline">[Citation à ajouter — Sophie Margaronis, État de Fribourg]</span></blockquote>
+        <cite>Sophie Margaronis · Responsable du programme de formation continue · État de Fribourg</cite>
       </div>
     </div>
     <div class="retombees">
-      <h4>RetombÃ©es</h4>
-      <p><em class="todo-badge">Ã€ complÃ©ter</em> Le questionnaire a-t-il Ã©tÃ© dÃ©ployÃ© auprÃ¨s du personnel de l'Ã‰tat de Fribourg ? A-t-il remplacÃ© ou complÃ©tÃ© les outils d'Ã©valuation existants ?</p>
+      <h4>Retombées</h4>
+      <p><em class="todo-badge">À compléter</em> Le questionnaire a-t-il été déployé auprès du personnel de l'État de Fribourg ? A-t-il remplacé ou complété les outils d'évaluation existants ?</p>
     </div>
   </article>
 </section>
 
-<!-- ====================== APPEL Ã€ PROJETS ====================== -->
+<!-- ====================== APPEL À PROJETS ====================== -->
 <section id="commanditaires">
   <div class="proposal">
-    <span class="eyebrow rose" style="color:#fff;border-left:3px solid var(--rose);padding-left:12px">Appel Ã  projets</span>
+    <span class="eyebrow rose" style="color:#fff;border-left:3px solid var(--rose);padding-left:12px">Appel à projets</span>
     <h2>Proposer un projet</h2>
-    <p>Vous avez une problÃ©matique de formation, d'accompagnement, de communication pÃ©dagogique ou de professionnalisation ? Proposez un projet aux Ã©tudiantÂ·es du cours pour le semestre de printemps 2027 !</p>
-    <p>Un bon projet doit rÃ©pondre Ã  un vrai besoin, contextualisÃ©, et utile Ã  un public cible identifiÃ©.</p>
-    <span class="deadline">DÃ©pÃ´t avant le 31 janvier 2027 Â· rÃ©ponse le 15 mars 2027</span>
+    <p>Vous avez une problématique de formation, d'accompagnement, de communication pédagogique ou de professionnalisation ? Proposez un projet aux étudiant·es du cours pour le semestre de printemps 2027 !</p>
+    <p>Un bon projet doit répondre à un vrai besoin, contextualisé, et utile à un public cible identifié.</p>
+    <span class="deadline">Dépôt avant le 31 janvier 2027 · réponse le 15 mars 2027</span>
     <br />
     <a class="btn" href="https://forms.office.com/e/qeduJ0piYu" target="_blank" rel="noopener">Proposer un projet<span class="sr-only"> (nouvel onglet)</span></a>
   </div>
@@ -803,12 +803,12 @@ a[target="_blank"].btn::after{
 <footer class="footer">
   <div class="footer-inner">
     <div>
-      <strong>Observatoire des projets Ã©tudiants</strong>
-      <p>Cours Â« Professionnalisation &amp; intervention Â» Â· FPSE Â· UniversitÃ© de GenÃ¨ve</p>
+      <strong>Observatoire des projets étudiants</strong>
+      <p>Cours « Professionnalisation &amp; intervention » · FPSE · Université de Genève</p>
     </div>
     <div class="footer-logo" style="display:flex;gap:24px;align-items:center">
-      <img src="assets/logos/logoFPSE.png" alt="FPSE â€” UniversitÃ© de GenÃ¨ve" />
-      <img src="assets/logos/AFFORDENS_TR.png" alt="AFORDENS â€” Laboratoire" style="max-width:160px;max-height:54px;object-fit:contain" />
+      <img src="assets/logos/logoFPSE.png" alt="FPSE — Université de Genève" />
+      <img src="assets/logos/AFFORDENS_TR.png" alt="AFORDENS — Laboratoire" style="max-width:160px;max-height:54px;object-fit:contain" />
     </div>
   </div>
 </footer>
@@ -841,7 +841,7 @@ a[target="_blank"].btn::after{
         &&(!q.value||n(card.dataset.search+' '+card.innerText).indexOf(n(q.value))>-1);
       card.style.display=ok?'flex':'none';if(ok)shown++;
     });
-    c.textContent=shown+' projet'+(shown>1?'s':'')+' affichÃ©'+(shown>1?'s':'');
+    c.textContent=shown+' projet'+(shown>1?'s':'')+' affiché'+(shown>1?'s':'');
     e.style.display=shown?'none':'block';
   }
   [y,t,l,s,q].forEach(function(x){x.addEventListener('input',f);});
@@ -862,7 +862,7 @@ a[target="_blank"].btn::after{
 
 /* ---- Ancres URL partageables via pushState ---- */
 (function(){
-  // Au chargement : si l'URL contient un ancre correspondant Ã  une fiche, scroll smooth
+  // Au chargement : si l'URL contient un ancre correspondant à une fiche, scroll smooth
   var hash=location.hash;
   if(hash){
     var target=document.querySelector('.detail'+hash);
@@ -886,7 +886,7 @@ a[target="_blank"].btn::after{
   });
 })();
 
-/* ---- Mobile PDF : dÃ©tecter les iframes PDF et marquer la section ---- */
+/* ---- Mobile PDF : détecter les iframes PDF et marquer la section ---- */
 (function(){
   document.querySelectorAll('iframe.embed-frame').forEach(function(iframe){
     if(iframe.getAttribute('src')&&iframe.getAttribute('src').indexOf('.pdf')>-1){
@@ -896,17 +896,17 @@ a[target="_blank"].btn::after{
   });
 })();
 
-/* ---- Carrousel Â« MÃ©dicament Â» (liste statique, sans dÃ©pendance rÃ©seau) ---- */
+/* ---- Carrousel « Médicament » (liste statique, sans dépendance réseau) ---- */
 (function(){
   var root=document.getElementById('medicament-carousel');
   if(!root)return;
   var base='Livrables/Medicament/';
   var images=[
-    {file:'Materiel du jeu.jpg',label:'MatÃ©riel du jeu'},
-    {file:'Demo jeu en seance.jpg',label:'DÃ©mo du jeu en sÃ©ance'},
-    {file:'Interface jeu 2.png',label:'Interface projetÃ©e'},
+    {file:'Materiel du jeu.jpg',label:'Matériel du jeu'},
+    {file:'Demo jeu en seance.jpg',label:'Démo du jeu en séance'},
+    {file:'Interface jeu 2.png',label:'Interface projetée'},
     {file:'Plateau de jeu.jpg',label:'Plateau de jeu'},
-    {file:'Regles.jpg',label:'RÃ¨gles du jeu'}
+    {file:'Regles.jpg',label:'Règles du jeu'}
   ];
   var index=0;
   function url(f){return base+encodeURIComponent(f);}
@@ -914,10 +914,10 @@ a[target="_blank"].btn::after{
     var img=images[index];
     root.innerHTML=
       '<div class="carousel-main">'+
-        '<button class="carousel-btn" type="button" id="prev-med" aria-label="Image prÃ©cÃ©dente">â€¹</button>'+
+        '<button class="carousel-btn" type="button" id="prev-med" aria-label="Image précédente">‹</button>'+
         '<div><div class="carousel-image-wrap"><a href="'+url(img.file)+'" target="_blank" rel="noopener"><img src="'+url(img.file)+'" alt="'+img.label+'" loading="lazy"></a></div>'+
         '<div class="carousel-caption">'+img.label+'</div></div>'+
-        '<button class="carousel-btn" type="button" id="next-med" aria-label="Image suivante">â€º</button>'+
+        '<button class="carousel-btn" type="button" id="next-med" aria-label="Image suivante">›</button>'+
       '</div>'+
       '<div class="thumbs">'+images.map(function(im,i){
         return '<button type="button" class="'+(i===index?'active':'')+'" data-index="'+i+'" aria-label="Voir '+im.label+'"><img src="'+url(im.file)+'" alt="'+im.label+'" loading="lazy"></button>';
