@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prointer.netlify.app/sitemap.xml
