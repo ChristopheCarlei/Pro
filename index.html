@@ -9,6 +9,9 @@
 <title>Observatoire des projets étudiants — FPSE, Université de Genève</title>
 <meta name="description" content="L'Observatoire des projets étudiants valorise les démarches et livrables réalisés par les étudiant·es du cours « Professionnalisation & intervention » de la FPSE (Université de Genève) à partir de demandes réelles de commanditaires." />
 <meta name="theme-color" content="#00857F" />
+<link rel="canonical" href="https://prointer.netlify.app/" />
+<link rel="preload" href="fonts/TheSansOsF-Plain.otf" as="font" type="font/otf" crossorigin />
+<link rel="preload" href="fonts/TheSansOsF-ExtraBold.otf" as="font" type="font/otf" crossorigin />
 
 <!-- Open Graph / partage -->
 <meta property="og:type" content="website" />
@@ -293,6 +296,8 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.06;letter-spacing:-.02em;font-we
 
 /* ---- Accessibilité : liens ouvrant dans un nouvel onglet ---- */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--teal-deep);color:#fff;padding:12px 20px;border-radius:0 0 var(--radius-sm) 0;font-weight:700}
+.skip-link:focus{left:0}
 a[target="_blank"].btn::after{
   content:"";display:inline-block;width:13px;height:13px;margin-left:6px;flex:none;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E") no-repeat center/contain;
@@ -355,6 +360,7 @@ a[target="_blank"].btn::after{
 </style>
 </head>
 <body>
+<a class="skip-link" href="#projets">Aller au contenu principal</a>
 <!-- En-tête visible uniquement à l'impression -->
 <div id="print-header">
   <img src="assets/logos/logoFPSE.png" alt="FPSE — Université de Genève" />
@@ -440,11 +446,11 @@ a[target="_blank"].btn::after{
       <div class="filter"><label for="fs">Commanditaire</label><select id="fs"><option value="all">Tous</option><option value="unige">UNIGE</option><option value="uclouvain">UCLouvain</option><option value="cmq">CMQ</option><option value="iufrs">IUFRS / Lausanne</option><option value="fribourg">État de Fribourg</option></select></div>
       <div class="filter"><label for="fq">Recherche</label><input id="fq" type="search" placeholder="Titre, public, mot-clé…" /></div>
     </div>
-    <div class="filter-meta"><span id="count">8 projets affichés</span><button class="reset" id="reset" type="button">Réinitialiser</button></div>
+    <div class="filter-meta"><span id="count" aria-live="polite">8 projets affichés</span><button class="reset" id="reset" type="button">Réinitialiser</button></div>
   </div>
 
   <div class="grid" id="grid">
-    <article class="card" data-year="2026" data-type="competences" data-livrable="rapport" data-sponsor="unige" data-search="parcours competences enquête quantitative rapport unige dife centre carrière">
+    <article class="card" data-year="2026" data-type="competences" data-livrable="rapport" data-sponsor="unige" data-search="parcours competences enquête quantitative rapport unige dife centre carrière ove observatoire vie etudiante guigon stassen">
       <div class="cover">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="11" width="3.4" height="7"/><rect x="10.3" y="7" width="3.4" height="11"/><rect x="15.6" y="13" width="3.4" height="5"/></svg></span>
         <span class="year">2026 · Rapport</span>
@@ -458,7 +464,7 @@ a[target="_blank"].btn::after{
       </div>
     </article>
 
-    <article class="card" data-year="2026" data-type="competences" data-livrable="video" data-sponsor="unige" data-search="parcours competences micro trottoir video témoignages unige dife">
+    <article class="card" data-year="2026" data-type="competences" data-livrable="video" data-sponsor="unige" data-search="parcours competences micro trottoir video témoignages unige dife ove observatoire vie etudiante guigon stassen">
       <div class="cover rose">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"/></svg></span>
         <span class="year">2026 · Vidéo</span>
@@ -708,7 +714,7 @@ a[target="_blank"].btn::after{
       <div class="block"><h4>Livrable final</h4><p>Dispositif pour une journée d'accueil participative ou scénario d'activités.</p></div>
     </div>
     <div class="students"><h4>Étudiant·es</h4><div class="student-list"><span>Angela Diaz</span><span>Kasia Dobrzynska</span><span>Isabel Guillinta</span></div></div>
-    <div class="embed-section"><h4>Livrable intégré</h4><iframe class="embed-frame" src="Livrables/Communaute.pdf" title="Communauté d'apprentissage" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="Livrables/Communaute.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le PDF dans un nouvel onglet</a></p></div>
+    <div class="embed-section"><h4>Livrable intégré</h4><iframe class="embed-frame" src="Livrables/Communaute.pdf#view=FitH" title="Communauté d'apprentissage" loading="lazy"></iframe><p class="embed-note"><a class="btn secondary" href="Livrables/Communaute.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le PDF dans un nouvel onglet</a></p></div>
     <div class="testimonial-section">
       <h4>Ce qu'en dit le commanditaire</h4>
       <div class="quote-card">
@@ -815,6 +821,13 @@ a[target="_blank"].btn::after{
     b.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
   });
   n.addEventListener('click',function(e){if(e.target.closest('a'))n.classList.remove('open');});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&n.classList.contains('open')){
+      n.classList.remove('open');
+      b.setAttribute('aria-expanded','false');
+      b.focus();
+    }
+  });
 })();
 
 /* ---- Filtres galerie ---- */
