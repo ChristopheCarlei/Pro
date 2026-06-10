@@ -118,7 +118,10 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.06;letter-spacing:-.02em;font-we
 
 /* ---- Héros (aplat FPSE) ---------------------------------- */
 .hero{background:var(--teal-deep);color:#fff}
-.hero-inner{width:var(--content);margin:auto;padding:clamp(52px,7vw,96px) 0 clamp(44px,6vw,72px)}
+.hero-inner{width:var(--content);margin:auto;padding:clamp(52px,7vw,96px) 0 clamp(44px,6vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4vw,64px);align-items:center}
+.hero-text{min-width:0}
+.hero-preview{min-width:0;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.3);aspect-ratio:4/3;background:var(--teal-deep)}
+.hero-preview iframe{width:100%;height:100%;border:0;display:block}
 .hero .eyebrow{color:#fff;border-left:3px solid var(--rose);padding-left:12px;margin-bottom:22px}
 .hero h1{font-size:clamp(38px,5.6vw,68px);line-height:1.02;letter-spacing:-.025em;font-weight:800;max-width:16ch}
 .hero .lead{font-size:clamp(17px,1.7vw,21px);color:rgba(255,255,255,.9);max-width:60ch;margin:22px 0 0;font-weight:400}
@@ -255,6 +258,8 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.06;letter-spacing:-.02em;font-we
   .navlinks .btn{margin-top:6px}
   .brand .titles span{display:none}
   .stats,.filter-grid,.timeline,.detail-grid{grid-template-columns:1fr}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-preview{aspect-ratio:16/9}
   .block:nth-child(odd){border-right:0}
   .carousel-main{grid-template-columns:1fr}
   .carousel-btn{width:100%;border-radius:var(--radius-sm)}
@@ -388,17 +393,22 @@ a[target="_blank"].btn::after{
 <!-- ====================== HÉROS ====================== -->
 <section class="hero" id="accueil" style="width:auto;padding:0">
   <div class="hero-inner">
-    <span class="eyebrow">Pédagogie par projet · demandes réelles · livrables utiles</span>
-    <h1>Quand les demandes du terrain deviennent des ressources pédagogiques</h1>
-    <p class="lead">Chaque année, les étudiant·es du cours travaillent à partir de problématiques proposées par des commanditaires. Cet observatoire valorise leurs démarches, leurs productions et les compétences développées.</p>
-    <div class="actions">
-      <a class="btn primary" href="#methode">Comprendre la démarche</a>
-      <a class="btn secondary" href="#projets">Découvrir les projets</a>
+    <div class="hero-text">
+      <span class="eyebrow">Pédagogie par projet · demandes réelles · livrables utiles</span>
+      <h1>Quand les demandes du terrain deviennent des ressources pédagogiques</h1>
+      <p class="lead">Chaque année, les étudiant·es du cours travaillent à partir de problématiques proposées par des commanditaires. Cet observatoire valorise leurs démarches, leurs productions et les compétences développées.</p>
+      <div class="actions">
+        <a class="btn primary" href="#methode">Comprendre la démarche</a>
+        <a class="btn secondary" href="#projets">Découvrir les projets</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>8</strong><span>projets recensés</span></div>
+        <div class="stat"><strong>7</strong><span>commanditaires</span></div>
+        <div class="stat"><strong>35</strong><span>étudiant·es impliqué·es</span></div>
+      </div>
     </div>
-    <div class="stats">
-      <div class="stat"><strong>8</strong><span>projets recensés</span></div>
-      <div class="stat"><strong>7</strong><span>commanditaires</span></div>
-      <div class="stat"><strong>35</strong><span>étudiant·es impliqué·es</span></div>
+    <div class="hero-preview">
+      <iframe src="https://syllabusprof.netlify.app/#hub" title="Programme du cours" loading="lazy" scrolling="yes"></iframe>
     </div>
   </div>
 </section>
