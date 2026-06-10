@@ -26,6 +26,32 @@
 <meta name="twitter:description" content="Quand les demandes du terrain deviennent des ressources pédagogiques." />
 <meta name="twitter:image" content="https://prointer.netlify.app/assets/og-cover.png" />
 
+<!-- Données structurées -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Observatoire des projets étudiants",
+  "url": "https://prointer.netlify.app/",
+  "inLanguage": "fr-CH",
+  "description": "Démarches, productions et compétences des étudiant·es du cours « Professionnalisation & intervention » de la FPSE, Université de Genève.",
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "Université de Genève — FPSE",
+    "url": "https://www.unige.ch/fapse/"
+  },
+  "about": {
+    "@type": "Course",
+    "name": "Professionnalisation & intervention dans les formations aux métiers de l'éducation et de la formation",
+    "courseCode": "752501",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Université de Genève — FPSE"
+    }
+  }
+}
+</script>
+
 <style>
 /* ============================================================
    TheSans — police institutionnelle UNIGE (auto-hébergée)
@@ -443,14 +469,14 @@ a[target="_blank"].btn::after{
       <div class="filter"><label for="fy">Année</label><select id="fy"><option value="all">Toutes</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option></select></div>
       <div class="filter"><label for="ft">Thème</label><select id="ft"><option value="all">Tous</option><option value="competences">Compétences transversales</option><option value="evaluation">Évaluation de formation</option><option value="pedagogie-active">Pédagogie active</option><option value="mediation">Médiation scientifique</option><option value="accueil">Accueil / intégration</option><option value="pedagogie-univ">Pédagogie universitaire</option></select></div>
       <div class="filter"><label for="fl">Livrable</label><select id="fl"><option value="all">Tous</option><option value="rapport">Rapport</option><option value="video">Vidéo</option><option value="questionnaire">Questionnaire</option><option value="jeu">Jeu sérieux</option><option value="maquette">Maquette web</option><option value="dispositif">Dispositif</option><option value="podcast">Podcast</option></select></div>
-      <div class="filter"><label for="fs">Commanditaire</label><select id="fs"><option value="all">Tous</option><option value="unige">UNIGE</option><option value="uclouvain">UCLouvain</option><option value="cmq">CMQ</option><option value="iufrs">IUFRS / Lausanne</option><option value="fribourg">État de Fribourg</option></select></div>
+      <div class="filter"><label for="fs">Commanditaire</label><select id="fs"><option value="all">Tous</option><option value="unige-dife">UNIGE / DIFE</option><option value="unige-sea">UNIGE / SEA</option><option value="unige-fpse">UNIGE / FPSE</option><option value="uclouvain">UCLouvain</option><option value="cmq">CMQ</option><option value="iufrs">IUFRS / Lausanne</option><option value="fribourg">État de Fribourg</option></select></div>
       <div class="filter"><label for="fq">Recherche</label><input id="fq" type="search" placeholder="Titre, public, mot-clé…" /></div>
     </div>
     <div class="filter-meta"><span id="count" aria-live="polite">8 projets affichés</span><button class="reset" id="reset" type="button">Réinitialiser</button></div>
   </div>
 
   <div class="grid" id="grid">
-    <article class="card" data-year="2026" data-type="competences" data-livrable="rapport" data-sponsor="unige" data-search="parcours competences enquête quantitative rapport unige dife centre carrière ove observatoire vie etudiante guigon stassen">
+    <article class="card" data-year="2026" data-type="competences" data-livrable="rapport" data-sponsor="unige-dife" data-search="parcours competences enquête quantitative rapport unige dife centre carrière ove observatoire vie etudiante guigon stassen">
       <div class="cover">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="11" width="3.4" height="7"/><rect x="10.3" y="7" width="3.4" height="11"/><rect x="15.6" y="13" width="3.4" height="5"/></svg></span>
         <span class="year">2026 · Rapport</span>
@@ -464,7 +490,7 @@ a[target="_blank"].btn::after{
       </div>
     </article>
 
-    <article class="card" data-year="2026" data-type="competences" data-livrable="video" data-sponsor="unige" data-search="parcours competences micro trottoir video témoignages unige dife ove observatoire vie etudiante guigon stassen">
+    <article class="card" data-year="2026" data-type="competences" data-livrable="video" data-sponsor="unige-dife" data-search="parcours competences micro trottoir video témoignages unige dife ove observatoire vie etudiante guigon stassen">
       <div class="cover rose">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"/></svg></span>
         <span class="year">2026 · Vidéo</span>
@@ -506,7 +532,7 @@ a[target="_blank"].btn::after{
       </div>
     </article>
 
-    <article class="card" data-year="2025" data-type="mediation" data-livrable="maquette" data-sponsor="unige" data-search="emotion education émotions site web unige fpse idea mediation scientifique">
+    <article class="card" data-year="2025" data-type="mediation" data-livrable="maquette" data-sponsor="unige-fpse" data-search="emotion education émotions site web unige fpse idea mediation scientifique">
       <div class="cover">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg></span>
         <span class="year">2025 · Maquette web</span>
@@ -534,7 +560,7 @@ a[target="_blank"].btn::after{
       </div>
     </article>
 
-    <article class="card" data-year="2024" data-type="pedagogie-univ" data-livrable="podcast" data-sponsor="unige" data-search="alignement pédagogique unige pole sea objectifs activités evaluation podcast">
+    <article class="card" data-year="2024" data-type="pedagogie-univ" data-livrable="podcast" data-sponsor="unige-sea" data-search="alignement pédagogique unige pole sea objectifs activités evaluation podcast">
       <div class="cover">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span>
         <span class="year">2024 · Podcast</span>
@@ -575,7 +601,7 @@ a[target="_blank"].btn::after{
   <article class="detail" id="parcours-competences">
     <div class="detail-head">
       <div class="detail-title"><h3>Parcours compétences — Enquête quantitative</h3><p>Année : 2026 · Commanditaire : UNIGE (DIFE : Centre de carrière &amp; OVE)</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/marine-guigon.png" alt="Marine Guigon" /></div><div class="avatar-name">Marine Guigon<span>Chargée de mission « Parcours compétences »</span></div></div><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/jean-francois-stassen.png" alt="Jean-François Stassen" /></div><div class="avatar-name">Jean-François Stassen<span>Chef de projet, Observatoire de la vie étudiante</span></div></div><div class="logo-card"><img src="assets/logos/logoCarriere.jpg" alt="DIFE — Centre de carrière" /></div></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/marine-guigon.webp" alt="Marine Guigon" /></div><div class="avatar-name">Marine Guigon<span>Chargée de mission « Parcours compétences »</span></div></div><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/jean-francois-stassen.webp" alt="Jean-François Stassen" /></div><div class="avatar-name">Jean-François Stassen<span>Chef de projet, Observatoire de la vie étudiante</span></div></div><div class="logo-card"><img src="assets/logos/logoCarriere.jpg" alt="DIFE — Centre de carrière" /></div></div>
     </div>
     <div class="detail-grid">
       <div class="block"><h4>Défi initial</h4><p>Mieux comprendre les besoins, perceptions et attentes des étudiant·es concernant les compétences transversales, afin de soutenir leur employabilité.</p></div>
@@ -601,7 +627,7 @@ a[target="_blank"].btn::after{
   <article class="detail" id="parcours-competences-micro-trottoir">
     <div class="detail-head">
       <div class="detail-title"><h3>Parcours compétences — Micro-trottoir vidéo</h3><p>Année : 2026 · Commanditaire : UNIGE (DIFE : Centre de carrière &amp; OVE)</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/marine-guigon.png" alt="Marine Guigon" /></div><div class="avatar-name">Marine Guigon<span>Chargée de mission « Parcours compétences »</span></div></div><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/jean-francois-stassen.png" alt="Jean-François Stassen" /></div><div class="avatar-name">Jean-François Stassen<span>Chef de projet, Observatoire de la vie étudiante</span></div></div><div class="logo-card"><img src="assets/logos/logoCarriere.jpg" alt="DIFE — Centre de carrière" /></div></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/marine-guigon.webp" alt="Marine Guigon" /></div><div class="avatar-name">Marine Guigon<span>Chargée de mission « Parcours compétences »</span></div></div><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/jean-francois-stassen.webp" alt="Jean-François Stassen" /></div><div class="avatar-name">Jean-François Stassen<span>Chef de projet, Observatoire de la vie étudiante</span></div></div><div class="logo-card"><img src="assets/logos/logoCarriere.jpg" alt="DIFE — Centre de carrière" /></div></div>
     </div>
     <div class="detail-grid">
       <div class="block"><h4>Défi initial</h4><p>Mieux comprendre la manière dont les étudiant·es perçoivent les compétences transversales.</p></div>
@@ -627,7 +653,7 @@ a[target="_blank"].btn::after{
   <article class="detail" id="communication-non-verbale">
     <div class="detail-head magenta">
       <div class="detail-title"><h3>Communication non verbale</h3><p>Année : 2026 · Commanditaire : UCLouvain</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/mathieu-couplet.png" alt="Mathieu Couplet" /></div><div class="avatar-name">Mathieu Couplet<span>Enseignant en communication non-verbale</span></div></div><div class="logo-card"><img src="assets/logos/logoUCL.png" alt="UCLouvain" /></div></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/mathieu-couplet.webp" alt="Mathieu Couplet" /></div><div class="avatar-name">Mathieu Couplet<span>Enseignant en communication non-verbale</span></div></div><div class="logo-card"><img src="assets/logos/logoUCL.png" alt="UCLouvain" /></div></div>
     </div>
     <div class="detail-grid">
       <div class="block"><h4>Défi initial</h4><p>Évaluer si les compétences travaillées dans un atelier de communication non verbale sont réutilisées dans la pratique enseignante.</p></div>
@@ -653,7 +679,7 @@ a[target="_blank"].btn::after{
   <article class="detail" id="medicament-en-jeu">
     <div class="detail-head">
       <div class="detail-title"><h3>Le Médicament en Jeu</h3><p>Année : 2026 · Commanditaire : CMQ</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/maud-bernies.png" alt="Maud Bernies" /></div><div class="avatar-name">Maud Bernies<span>Directrice CMQe « Biotech Santé »</span></div></div><div class="logo-card tall"><img src="assets/logos/logoCMQ.jpg" alt="CMQ Lyon" /></div></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/maud-bernies.webp" alt="Maud Bernies" /></div><div class="avatar-name">Maud Bernies<span>Directrice CMQe « Biotech Santé »</span></div></div><div class="logo-card tall"><img src="assets/logos/logoCMQ.jpg" alt="CMQ Lyon" /></div></div>
     </div>
     <div class="detail-grid">
       <div class="block"><h4>Défi initial</h4><p>Transformer une ressource existante sur le médicament en dispositif pédagogique actif et ludique.</p></div>
@@ -679,7 +705,7 @@ a[target="_blank"].btn::after{
   <article class="detail" id="emotion-education">
     <div class="detail-head magenta">
       <div class="detail-title"><h3>Émotion et Éducation</h3><p>Année : 2025 · Commanditaire : UNIGE (FPSE)</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/nathalie-mella.png" alt="Nathalie Mella" /></div><div class="avatar-name">Nathalie Mella<span>Chargée de cours</span></div></div><div class="logo-card"><img src="assets/logos/logoFPSE.png" alt="UNIGE — FPSE" /></div><div class="logo-card small logo-idea">IDEA</div></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/nathalie-mella.webp" alt="Nathalie Mella" /></div><div class="avatar-name">Nathalie Mella<span>Chargée de cours</span></div></div><div class="logo-card"><img src="assets/logos/logoFPSE.png" alt="UNIGE — FPSE" /></div><div class="logo-card small logo-idea">IDEA</div></div>
     </div>
     <div class="detail-grid">
       <div class="block"><h4>Défi initial</h4><p>Penser l'architecture d'un site destiné à diffuser des résultats de recherche sur les liens entre émotion et éducation.</p></div>
@@ -705,7 +731,7 @@ a[target="_blank"].btn::after{
   <article class="detail" id="communaute-apprentissage">
     <div class="detail-head">
       <div class="detail-title"><h3>Communauté d'apprentissage</h3><p>Année : 2025 · Commanditaire : IUFRS / Lausanne</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/gaetan-moerman.png" alt="Gaëtan Moerman" /></div><div class="avatar-name">Gaëtan Moerman<span>Conseiller pédagogique</span></div></div><div class="logo-card"><img src="assets/logos/logoIUFRS.png" alt="IUFRS — Université de Lausanne" /></div></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/gaetan-moerman.webp" alt="Gaëtan Moerman" /></div><div class="avatar-name">Gaëtan Moerman<span>Conseiller pédagogique</span></div></div><div class="logo-card"><img src="assets/logos/logoIUFRS.png" alt="IUFRS — Université de Lausanne" /></div></div>
     </div>
     <div class="detail-grid">
       <div class="block"><h4>Défi initial</h4><p>Rendre les journées d'accueil de l'IUFRS plus dynamiques, participatives et intégratives.</p></div>
@@ -731,7 +757,7 @@ a[target="_blank"].btn::after{
   <article class="detail" id="alignement-pedagogique">
     <div class="detail-head">
       <div class="detail-title"><h3>Alignement pédagogique</h3><p>Année : 2024 · Commanditaire : UNIGE (Pôle SEA)</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/catherine-huneault.png" alt="Catherine Huneault" /></div><div class="avatar-name">Catherine Huneault<span>Responsable développement et qualité des cursus</span></div></div><div class="logo-card"><img src="assets/logos/logoSEA.png" alt="Pôle SEA — Université de Genève" /></div></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/catherine-huneault.webp" alt="Catherine Huneault" /></div><div class="avatar-name">Catherine Huneault<span>Responsable développement et qualité des cursus</span></div></div><div class="logo-card"><img src="assets/logos/logoSEA.png" alt="Pôle SEA — Université de Genève" /></div></div>
     </div>
     <div class="detail-grid">
       <div class="block"><h4>Défi initial</h4><p>Sensibiliser les enseignant·es universitaires à l'alignement pédagogique.</p></div>
@@ -757,7 +783,7 @@ a[target="_blank"].btn::after{
   <article class="detail" id="evaluation-formation">
     <div class="detail-head magenta">
       <div class="detail-title"><h3>Évaluation formation</h3><p>Année : 2024 · Commanditaire : État de Fribourg</p></div>
-      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/sophie-margaronis.png" alt="Sophie Margaronis" /></div><div class="avatar-name">Sophie Margaronis<span>Responsable du programme de formation continue</span></div></div><div class="logo-card small"><img src="assets/logos/logoFribourg.png" alt="État de Fribourg" /></div></div>
+      <div class="logos"><div class="avatar-block"><div class="avatar-sponsor"><img src="assets/photos/sophie-margaronis.webp" alt="Sophie Margaronis" /></div><div class="avatar-name">Sophie Margaronis<span>Responsable du programme de formation continue</span></div></div><div class="logo-card small"><img src="assets/logos/logoFribourg.png" alt="État de Fribourg" /></div></div>
     </div>
     <div class="detail-grid">
       <div class="block"><h4>Défi initial</h4><p>Améliorer les questionnaires d'évaluation des formations continues proposées au personnel de l'État de Fribourg.</p></div>
@@ -959,6 +985,12 @@ a[target="_blank"].btn::after{
     document.getElementById('next-med').onclick=function(){index=(index+1)%images.length;render();};
     root.querySelectorAll('.thumbs button').forEach(function(btn){btn.onclick=function(){index=Number(btn.dataset.index);render();};});
   }
+  root.setAttribute('tabindex','0');
+  root.setAttribute('aria-label','Carrousel d’images — utilisez les flèches gauche et droite');
+  root.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft'){e.preventDefault();index=(index-1+images.length)%images.length;render();}
+    else if(e.key==='ArrowRight'){e.preventDefault();index=(index+1)%images.length;render();}
+  });
   render();
 })();
 </script>
